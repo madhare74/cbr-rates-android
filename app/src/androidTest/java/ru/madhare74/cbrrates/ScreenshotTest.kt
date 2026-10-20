@@ -84,7 +84,7 @@ class ScreenshotTest {
         composeRule.waitForIdle()
         val bitmap = composeRule.onRoot().captureToImage().asAndroidBitmap()
         val instrumentation = InstrumentationRegistry.getInstrumentation()
-        val dir = File(instrumentation.targetContext.getExternalFilesDir(null), "screenshots").apply { mkdirs() }
+        val dir = File(instrumentation.targetContext.filesDir, "screenshots").apply { mkdirs() }
         val file = File(dir, "$name.png")
         file.outputStream().use { bitmap.compress(Bitmap.CompressFormat.PNG, 100, it) }
     }

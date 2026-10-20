@@ -103,7 +103,9 @@ jobs:
             adb install -r app/build/outputs/apk/debug/app-debug.apk > app/build/shots.log 2>&1 || true
             adb install -r app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk >> app/build/shots.log 2>&1 || true
             adb shell am instrument -w -e class ru.madhare74.cbrrates.ScreenshotTest ru.madhare74.cbrrates.test/androidx.test.runner.AndroidJUnitRunner >> app/build/shots.log 2>&1 || true
-            adb pull /sdcard/Android/data/ru.madhare74.cbrrates/files/screenshots app/build/screenshots >> app/build/shots.log 2>&1 || true
+            mkdir -p app/build/screenshots
+            adb exec-out run-as ru.madhare74.cbrrates tar -c files/screenshots > app/build/shots.tar 2>> app/build/shots.log || true
+            tar -xf app/build/shots.tar -C app/build/screenshots --strip-components=2 >> app/build/shots.log 2>&1 || true
 
       - name: Отчёт UI-тестов
         if: always()
