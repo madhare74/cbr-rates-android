@@ -79,6 +79,7 @@ object WidgetModels {
             rubFlag = Flags.emoji("RUB"),
             rate = tileRate(rate.value),
             nominalNote = if (rate.nominal == 1) null else "за ${rate.nominal} $code",
+            nominal = rate.nominal,
             percent = change?.let { percent(rate.value, it.delta) },
             direction = change?.let { if (percent(rate.value, it.delta) == "0,00%") Direction.SAME else it.direction },
             date = data.current.date.format(SHORT_DATE),
