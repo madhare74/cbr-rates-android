@@ -7,6 +7,9 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.WindowInsets
+import androidx.compose.foundation.layout.statusBars
+import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -21,8 +24,8 @@ import androidx.compose.material.icons.filled.Clear
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material3.Button
-import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -31,7 +34,6 @@ import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
-import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.pulltorefresh.PullToRefreshBox
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -77,29 +79,32 @@ fun RatesScreen(
 ) {
     Scaffold(
         topBar = {
-            TopAppBar(
-                title = {
-                    // Две короткие строки вместо одной длинной: при крупном системном
-                    // шрифте заголовок не переносится посреди фразы.
-                    val date = state.data?.current?.date
-                    Column(Modifier.semantics(mergeDescendants = true) {}.testTag(Tags.HEADER)) {
+            // Своя шапка без фиксированной высоты: при крупном системном шрифте
+            // строки не обрезаются, а просто занимают больше места.
+            val date = state.data?.current?.date
+            Surface(color = MaterialTheme.colorScheme.surface) {
+                Column(
+                    Modifier
+                        .fillMaxWidth()
+                        .windowInsetsPadding(WindowInsets.statusBars)
+                        .padding(start = 16.dp, end = 16.dp, top = 12.dp, bottom = 8.dp)
+                        .semantics(mergeDescendants = true) {}
+                        .testTag(Tags.HEADER),
+                ) {
+                    Text(
+                        "Курсы ЦБ РФ",
+                        style = MaterialTheme.typography.headlineSmall,
+                        fontWeight = FontWeight.SemiBold,
+                    )
+                    if (date != null) {
                         Text(
-                            "Курсы ЦБ РФ",
-                            style = MaterialTheme.typography.titleLarge,
-                            maxLines = 1,
-                            overflow = TextOverflow.Ellipsis,
+                            "на ${RuFormat.date(date)}",
+                            style = MaterialTheme.typography.bodyMedium,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
                         )
-                        if (date != null) {
-                            Text(
-                                "на ${RuFormat.date(date)}",
-                                style = MaterialTheme.typography.bodyMedium,
-                                color = MaterialTheme.colorScheme.onSurfaceVariant,
-                                maxLines = 1,
-                            )
-                        }
                     }
-                },
-            )
+                }
+            }
         },
     ) { padding ->
         Column(
@@ -269,8 +274,8 @@ private fun RateRowItem(
         ) {
             Text(Flags.emoji(rate.code), fontSize = 26.sp)
             Spacer(Modifier.width(12.dp))
-            // Каждая строка занимает всю ширину колонки: код и название не делят место
-            // с курсом, поэтому при крупном шрифте ничего не сжимается в столбик.
+            // Строка 1: код, название, изменение. Строка 2 целиком отдана курсу,
+            // поэтому при крупном шрифте число не разрывается и не сжимается в столбик.
             Column(Modifier.weight(1f)) {
                 Row(verticalAlignment = Alignment.CenterVertically) {
                     Text(
@@ -289,21 +294,19 @@ private fun RateRowItem(
                         maxLines = 1,
                         overflow = TextOverflow.Ellipsis,
                     )
-                }
-                Spacer(Modifier.height(2.dp))
-                Row(verticalAlignment = Alignment.Bottom) {
-                    // Неразрывные пробелы: если не влезет, перенос будет только у «=».
-                    Text(
-                        RatesList.rateLabelNoBreak(rate),
-                        modifier = Modifier.weight(1f),
-                        style = MaterialTheme.typography.titleMedium,
-                        fontWeight = FontWeight.Medium,
-                    )
                     row.change?.let {
                         Spacer(Modifier.width(8.dp))
                         ChangeLabel(it)
                     }
                 }
+                Spacer(Modifier.height(2.dp))
+                // Неразрывные пробелы внутри «100 KZT» и «16,4521 ₽»:
+                // если строка не влезает, перенос будет только после «=».
+                Text(
+                    RatesList.rateLabelNoBreak(rate),
+                    style = MaterialTheme.typography.titleMedium,
+                    fontWeight = FontWeight.Medium,
+                )
             }
             IconButton(
                 onClick = { onToggleFavorite(rate.code) },

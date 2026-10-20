@@ -95,6 +95,8 @@ class ScreenshotTest {
 
     @Test fun list_scale150_dark() { launch(1.5f, dark = true); save("list_scale150_dark") }
 
+    @Test fun list_scale130_dark() { launch(1.3f, dark = true); save("list_scale130_dark") }
+
     @Test fun list_scale200_dark() { launch(2.0f, dark = true); save("list_scale200_dark") }
 
     @Test
