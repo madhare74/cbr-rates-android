@@ -32,6 +32,7 @@ import androidx.compose.ui.unit.dp
 import ru.madhare74.cbrrates.data.Rate
 import ru.madhare74.cbrrates.domain.Converter
 import ru.madhare74.cbrrates.domain.Flags
+import ru.madhare74.cbrrates.domain.RatesList
 import ru.madhare74.cbrrates.domain.RuFormat
 import java.time.LocalDate
 
@@ -64,7 +65,7 @@ fun ConverterScreen(rate: Rate, date: LocalDate, onBack: () -> Unit) {
             Text("${Flags.emoji(rate.code)} ${rate.name}", style = MaterialTheme.typography.titleLarge)
             Spacer(Modifier.height(4.dp))
             Text(
-                "Курс ЦБ на ${RuFormat.date(date)}: ${rate.nominal} ${rate.code} = ${RuFormat.rate(rate.value)} ₽",
+                "Курс ЦБ на ${RuFormat.date(date)}:\n${RatesList.rateLabelNoBreak(rate)}",
                 style = MaterialTheme.typography.bodyMedium,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
             )

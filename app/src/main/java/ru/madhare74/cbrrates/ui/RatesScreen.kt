@@ -274,31 +274,29 @@ private fun RateRowItem(
         ) {
             Text(Flags.emoji(rate.code), fontSize = 26.sp)
             Spacer(Modifier.width(12.dp))
-            // Строка 1: код, название, изменение. Строка 2 целиком отдана курсу,
-            // поэтому при крупном шрифте число не разрывается и не сжимается в столбик.
+            // Строка 1: код и изменение. Строка 2: название целиком. Строка 3: курс.
+            // У каждой строки своя полная ширина — при крупном шрифте ничего не сжимается.
             Column(Modifier.weight(1f)) {
                 Row(verticalAlignment = Alignment.CenterVertically) {
                     Text(
                         rate.code,
+                        modifier = Modifier.weight(1f),
                         style = MaterialTheme.typography.titleMedium,
                         fontWeight = FontWeight.SemiBold,
                         maxLines = 1,
-                        softWrap = false,
-                    )
-                    Spacer(Modifier.width(8.dp))
-                    Text(
-                        rate.name,
-                        modifier = Modifier.weight(1f),
-                        style = MaterialTheme.typography.bodyMedium,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant,
-                        maxLines = 1,
-                        overflow = TextOverflow.Ellipsis,
                     )
                     row.change?.let {
                         Spacer(Modifier.width(8.dp))
                         ChangeLabel(it)
                     }
                 }
+                Text(
+                    rate.name,
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    maxLines = 2,
+                    overflow = TextOverflow.Ellipsis,
+                )
                 Spacer(Modifier.height(2.dp))
                 // Неразрывные пробелы внутри «100 KZT» и «16,4521 ₽»:
                 // если строка не влезает, перенос будет только после «=».
