@@ -58,9 +58,9 @@ class WidgetScreenshotTest {
     }
 
     @OptIn(ExperimentalGlanceRemoteViewsApi::class)
-    private fun render(name: String, code: String, size: DpSize, dark: Boolean, fontScale: Float = 1f) {
+    private fun render(name: String, code: String, size: DpSize, dark: Boolean, fontScale: Float = 1f, transparency: Int = 10) {
         val context = themed(dark, fontScale)
-        val views = runBlocking { RatesWidget(codeOverride = code).compose(context, size = size) }
+        val views = runBlocking { RatesWidget(codeOverride = code, transparencyOverride = transparency).compose(context, size = size) }
         val metrics = context.resources.displayMetrics
         fun px(dp: Float) = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, metrics).toInt()
         val w = px(size.width.value)
@@ -79,7 +79,15 @@ class WidgetScreenshotTest {
             // Фон «обоев», чтобы видеть края и прозрачность плитки
             val out = Bitmap.createBitmap(w + 2 * pad, h + 2 * pad, Bitmap.Config.ARGB_8888)
             val canvas = Canvas(out)
-            canvas.drawColor(if (dark) Color.rgb(40, 34, 30) else Color.rgb(150, 170, 200))
+            // «Обои» с градиентом — чтобы оценить прозрачность
+            val paint = android.graphics.Paint().apply {
+                shader = android.graphics.LinearGradient(
+                    0f, 0f, out.width.toFloat(), out.height.toFloat(),
+                    intArrayOf(Color.rgb(58, 110, 165), Color.rgb(217, 160, 102), Color.rgb(46, 42, 40)),
+                    null, android.graphics.Shader.TileMode.CLAMP,
+                )
+            }
+            canvas.drawRect(0f, 0f, out.width.toFloat(), out.height.toFloat(), paint)
             canvas.translate(pad.toFloat(), pad.toFloat())
             parent.draw(canvas)
             bitmap = out
@@ -98,6 +106,15 @@ class WidgetScreenshotTest {
     @Test fun widget_usd_small_dark() = render("widget_usd_small_dark", "USD", DpSize(100.dp, 100.dp), dark = true)
 
     @Test fun widget_usd_wide_dark() = render("widget_usd_wide_dark", "USD", DpSize(260.dp, 130.dp), dark = true)
+
+    @Test fun widget_usd_t40_dark() =
+        render("widget_usd_t40_dark", "USD", DpSize(150.dp, 150.dp), dark = true, transparency = 40)
+
+    @Test fun widget_eur_t70_dark() =
+        render("widget_eur_t70_dark", "EUR", DpSize(150.dp, 150.dp), dark = true, transparency = 70)
+
+    @Test fun widget_usd_t100_light() =
+        render("widget_usd_t100_light", "USD", DpSize(150.dp, 150.dp), dark = false, transparency = 100)
 
     @Test fun widget_usd_bigfont_dark() =
         render("widget_usd_bigfont_dark", "USD", DpSize(150.dp, 150.dp), dark = true, fontScale = 1.5f)

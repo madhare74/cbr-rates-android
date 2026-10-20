@@ -2,20 +2,28 @@ package ru.madhare74.cbrrates.widget
 
 import android.content.Context
 
-/** Какая валюта выбрана для каждого виджета (по appWidgetId). */
+/** Настройки каждого виджета (по appWidgetId): валюта и прозрачность фона. */
 object WidgetPrefs {
     private const val FILE = "widgets"
 
-    private fun key(appWidgetId: Int) = "code_$appWidgetId"
+    private fun codeKey(appWidgetId: Int) = "code_$appWidgetId"
+    private fun transparencyKey(appWidgetId: Int) = "transparency_$appWidgetId"
 
-    fun code(context: Context, appWidgetId: Int): String? =
-        context.getSharedPreferences(FILE, Context.MODE_PRIVATE).getString(key(appWidgetId), null)
+    private fun prefs(context: Context) = context.getSharedPreferences(FILE, Context.MODE_PRIVATE)
 
-    fun setCode(context: Context, appWidgetId: Int, code: String) {
-        context.getSharedPreferences(FILE, Context.MODE_PRIVATE).edit().putString(key(appWidgetId), code).apply()
+    fun code(context: Context, appWidgetId: Int): String? = prefs(context).getString(codeKey(appWidgetId), null)
+
+    fun transparency(context: Context, appWidgetId: Int): Int =
+        prefs(context).getInt(transparencyKey(appWidgetId), WidgetStyle.DEFAULT_TRANSPARENCY)
+
+    fun save(context: Context, appWidgetId: Int, code: String, transparency: Int) {
+        prefs(context).edit()
+            .putString(codeKey(appWidgetId), code)
+            .putInt(transparencyKey(appWidgetId), transparency.coerceIn(0, 100))
+            .commit()
     }
 
     fun remove(context: Context, appWidgetId: Int) {
-        context.getSharedPreferences(FILE, Context.MODE_PRIVATE).edit().remove(key(appWidgetId)).apply()
+        prefs(context).edit().remove(codeKey(appWidgetId)).remove(transparencyKey(appWidgetId)).apply()
     }
 }

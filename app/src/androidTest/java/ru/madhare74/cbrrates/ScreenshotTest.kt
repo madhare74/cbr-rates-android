@@ -16,6 +16,10 @@ import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 import ru.madhare74.cbrrates.data.InMemoryFavoritesStore
+import ru.madhare74.cbrrates.data.DEFAULT_FAVORITES
+import ru.madhare74.cbrrates.data.LoadResult
+import ru.madhare74.cbrrates.widget.ChooserScreen
+import kotlinx.coroutines.runBlocking
 import ru.madhare74.cbrrates.data.InMemoryRatesCache
 import ru.madhare74.cbrrates.data.RatesRepository
 import ru.madhare74.cbrrates.data.RatesSource
@@ -98,6 +102,25 @@ class ScreenshotTest {
     @Test fun list_scale130_dark() { launch(1.3f, dark = true); save("list_scale130_dark") }
 
     @Test fun list_scale200_dark() { launch(2.0f, dark = true); save("list_scale200_dark") }
+
+    @Test
+    fun widget_config_dark() {
+        val data = runBlocking { RatesRepository(source, InMemoryRatesCache()).load() } as LoadResult.Fresh
+        composeRule.setContent {
+            CbrTheme(darkTheme = true) {
+                ChooserScreen(
+                    data = data.data,
+                    failed = false,
+                    favorites = DEFAULT_FAVORITES,
+                    initialCode = "EUR",
+                    initialTransparency = 60,
+                    isNew = true,
+                    onSave = { _, _ -> },
+                )
+            }
+        }
+        save("widget_config_dark")
+    }
 
     @Test
     fun converter_scale150_dark() {
