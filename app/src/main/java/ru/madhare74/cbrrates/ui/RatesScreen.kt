@@ -2,7 +2,6 @@ package ru.madhare74.cbrrates.ui
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.combinedClickable
-import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -10,6 +9,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
@@ -37,7 +37,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.luminance
 import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
@@ -49,6 +51,7 @@ import ru.madhare74.cbrrates.domain.Flags
 import ru.madhare74.cbrrates.domain.RateChange
 import ru.madhare74.cbrrates.domain.RateRow
 import ru.madhare74.cbrrates.domain.RatesList
+import ru.madhare74.cbrrates.domain.RuFormat
 
 object Tags {
     const val HEADER = "header"
@@ -76,10 +79,25 @@ fun RatesScreen(
         topBar = {
             TopAppBar(
                 title = {
-                    Text(
-                        RatesList.header(state.data?.current?.date),
-                        modifier = Modifier.testTag(Tags.HEADER),
-                    )
+                    // Две короткие строки вместо одной длинной: при крупном системном
+                    // шрифте заголовок не переносится посреди фразы.
+                    val date = state.data?.current?.date
+                    Column(Modifier.semantics(mergeDescendants = true) {}.testTag(Tags.HEADER)) {
+                        Text(
+                            "Курсы ЦБ РФ",
+                            style = MaterialTheme.typography.titleLarge,
+                            maxLines = 1,
+                            overflow = TextOverflow.Ellipsis,
+                        )
+                        if (date != null) {
+                            Text(
+                                "на ${RuFormat.date(date)}",
+                                style = MaterialTheme.typography.bodyMedium,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                maxLines = 1,
+                            )
+                        }
+                    }
                 },
             )
         },
@@ -120,7 +138,8 @@ private fun SearchField(query: String, onQueryChange: (String) -> Unit) {
             .fillMaxWidth()
             .padding(horizontal = 16.dp, vertical = 4.dp)
             .testTag(Tags.SEARCH),
-        placeholder = { Text("Поиск по коду или названию") },
+        placeholder = { Text("Код или название", maxLines = 1, overflow = TextOverflow.Ellipsis) },
+        textStyle = MaterialTheme.typography.bodyLarge,
         leadingIcon = { Icon(Icons.Filled.Search, contentDescription = null) },
         trailingIcon = {
             if (query.isNotEmpty()) {
@@ -248,26 +267,43 @@ private fun RateRowItem(
                 .testTag(Tags.row(rate.code)),
             verticalAlignment = Alignment.CenterVertically,
         ) {
-            Text(Flags.emoji(rate.code), fontSize = 28.sp)
+            Text(Flags.emoji(rate.code), fontSize = 26.sp)
             Spacer(Modifier.width(12.dp))
+            // Каждая строка занимает всю ширину колонки: код и название не делят место
+            // с курсом, поэтому при крупном шрифте ничего не сжимается в столбик.
             Column(Modifier.weight(1f)) {
-                Text(rate.code, style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.SemiBold)
-                Text(
-                    rate.name,
-                    style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    maxLines = 2,
-                    overflow = TextOverflow.Ellipsis,
-                )
-            }
-            Spacer(Modifier.width(8.dp))
-            Column(horizontalAlignment = Alignment.End) {
-                Text(
-                    RatesList.rateLabel(rate),
-                    style = MaterialTheme.typography.bodyLarge,
-                    fontWeight = FontWeight.Medium,
-                )
-                row.change?.let { ChangeLabel(it) }
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Text(
+                        rate.code,
+                        style = MaterialTheme.typography.titleMedium,
+                        fontWeight = FontWeight.SemiBold,
+                        maxLines = 1,
+                        softWrap = false,
+                    )
+                    Spacer(Modifier.width(8.dp))
+                    Text(
+                        rate.name,
+                        modifier = Modifier.weight(1f),
+                        style = MaterialTheme.typography.bodyMedium,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        maxLines = 1,
+                        overflow = TextOverflow.Ellipsis,
+                    )
+                }
+                Spacer(Modifier.height(2.dp))
+                Row(verticalAlignment = Alignment.Bottom) {
+                    // Неразрывные пробелы: если не влезет, перенос будет только у «=».
+                    Text(
+                        RatesList.rateLabelNoBreak(rate),
+                        modifier = Modifier.weight(1f),
+                        style = MaterialTheme.typography.titleMedium,
+                        fontWeight = FontWeight.Medium,
+                    )
+                    row.change?.let {
+                        Spacer(Modifier.width(8.dp))
+                        ChangeLabel(it)
+                    }
+                }
             }
             IconButton(
                 onClick = { onToggleFavorite(rate.code) },
@@ -286,11 +322,17 @@ private fun RateRowItem(
 
 @Composable
 private fun ChangeLabel(change: RateChange) {
-    val dark = isSystemInDarkTheme()
+    val dark = MaterialTheme.colorScheme.background.luminance() < 0.5f
     val color = when (change.direction) {
         Direction.UP -> if (dark) Color(0xFF66BB6A) else Color(0xFF2E7D32)
         Direction.DOWN -> if (dark) Color(0xFFEF5350) else Color(0xFFC62828)
         Direction.SAME -> MaterialTheme.colorScheme.onSurfaceVariant
     }
-    Text(Changes.label(change), color = color, style = MaterialTheme.typography.bodySmall)
+    Text(
+        Changes.label(change).replace(' ', ' '),
+        color = color,
+        style = MaterialTheme.typography.bodyMedium,
+        maxLines = 1,
+        softWrap = false,
+    )
 }

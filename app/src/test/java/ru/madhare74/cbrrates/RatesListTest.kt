@@ -42,6 +42,12 @@ class RatesListTest {
     }
 
     @Test
+    fun `no-break label wraps only around equals sign`() {
+        assertEquals("100 KZT = 16,4521 ₽", RatesList.rateLabelNoBreak(data.current.byCode("KZT")!!))
+        assertEquals("81,1234 ₽", RatesList.rateLabelNoBreak(data.current.byCode("USD")!!))
+    }
+
+    @Test
     fun `header contains cbr date`() {
         assertEquals("Курсы ЦБ РФ на 21.10.2026", RatesList.header(LocalDate.of(2026, 10, 21)))
     }

@@ -98,7 +98,9 @@ jobs:
           target: default
           disable-animations: true
           emulator-options: -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
-          script: ./gradlew --stacktrace connectedDebugAndroidTest
+          script: |
+            ./gradlew --stacktrace connectedDebugAndroidTest || (adb pull /data/local/tmp/screenshots app/build/screenshots; exit 1)
+            adb pull /data/local/tmp/screenshots app/build/screenshots || true
 
       - name: Отчёт UI-тестов
         if: always()
@@ -115,6 +117,7 @@ jobs:
         run: |
           mkdir -p out
           cp -r app/build/outputs/androidTest-results/connected out/ || true
+          cp -r app/build/screenshots out/ || true
           echo "${GITHUB_SHA}" > out/COMMIT
           cd out
           git init -q -b ui-test-results

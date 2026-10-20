@@ -50,6 +50,15 @@ object RatesList {
         return if (rate.nominal == 1) rub else "${rate.nominal} ${rate.code} = $rub"
     }
 
+    /**
+     * То же, что [rateLabel], но с неразрывными пробелами внутри «100 KZT» и «16,4521 ₽»:
+     * при нехватке места строка переносится только около знака «=».
+     */
+    fun rateLabelNoBreak(rate: Rate): String {
+        val rub = (RuFormat.rate(rate.value) + " ₽").replace(' ', ' ')
+        return if (rate.nominal == 1) rub else "${rate.nominal} ${rate.code} = $rub"
+    }
+
     fun header(date: LocalDate?): String =
         if (date == null) "Курсы ЦБ РФ" else "Курсы ЦБ РФ на ${RuFormat.date(date)}"
 }

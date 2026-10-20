@@ -54,14 +54,14 @@ class RatesUiTest {
     @Test
     fun screenOpensAndShowsList() {
         launch(sampleSource)
-        composeRule.onNodeWithTag(Tags.HEADER).assertTextEquals("Курсы ЦБ РФ на 18.10.2026")
+        composeRule.onNodeWithTag(Tags.HEADER).assertTextEquals("Курсы ЦБ РФ", "на 18.10.2026")
         composeRule.onNodeWithTag(Tags.LIST).assertIsDisplayed()
         composeRule.onNodeWithText("Избранное").assertIsDisplayed()
         composeRule.onNodeWithTag(Tags.row("USD")).assertIsDisplayed()
         composeRule.onNodeWithText("Доллар США").assertIsDisplayed()
-        composeRule.onNodeWithText("81,1234 ₽").assertIsDisplayed()
-        composeRule.onNodeWithText("100 KZT = 16,4521 ₽").assertIsDisplayed()
-        composeRule.onNodeWithText("▲ 0,1358").assertIsDisplayed()
+        composeRule.onNodeWithText("81,1234\u00A0₽").assertIsDisplayed()
+        composeRule.onNodeWithText("100\u00A0KZT = 16,4521\u00A0₽").assertIsDisplayed()
+        composeRule.onNodeWithText("▲\u00A00,1358").assertIsDisplayed()
     }
 
     @Test

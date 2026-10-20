@@ -44,8 +44,8 @@ fun RatesApp(viewModel: RatesViewModel) {
 }
 
 @Composable
-fun CbrTheme(content: @Composable () -> Unit) {
-    val dark = isSystemInDarkTheme()
+fun CbrTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composable () -> Unit) {
+    val dark = darkTheme
     val context = LocalContext.current
     val colors = when {
         Build.VERSION.SDK_INT >= Build.VERSION_CODES.S ->
