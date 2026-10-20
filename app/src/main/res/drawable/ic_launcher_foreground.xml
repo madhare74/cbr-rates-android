@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Знак рубля и линия графика. Холст 108x108, безопасная зона 66x66 в центре. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- вертикаль рубля -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M40,30h6v48h-6z" />
+    <!-- петля рубля -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="6"
+        android:pathData="M43,33h12a10,10 0,0 1,0 20h-17" />
+    <!-- перекладина -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M34,61h22v5h-22z" />
+    <!-- линия роста -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#FFD54F"
+        android:strokeWidth="4"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M58,74l6,-8l5,4l8,-12" />
+</vector>
