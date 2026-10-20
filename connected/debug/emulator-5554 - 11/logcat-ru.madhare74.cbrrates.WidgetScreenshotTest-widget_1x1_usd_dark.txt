@@ -1,0 +1,14 @@
+10-20 11:13:20.951  2348  2369 I TestRunner: started: widget_1x1_usd_dark(ru.madhare74.cbrrates.WidgetScreenshotTest)
+10-20 11:13:20.963  2348  2362 W System  : A resource failed to call release.
+10-20 11:13:20.966  2348  2362 I chatty  : uid=10130(ru.madhare74.cbrrates) FinalizerDaemon identical 3 lines
+10-20 11:13:20.966  2348  2362 W System  : A resource failed to call release.
+10-20 11:13:20.966  2348  2362 W System  : A resource failed to call dispose.
+10-20 11:13:20.966  2348  2362 W System  : A resource failed to call release.
+10-20 11:13:20.967  2348  2362 W System  : A resource failed to call dispose.
+10-20 11:13:20.967  2348  2362 W System  : A resource failed to call release.
+10-20 11:13:20.967  2348  2362 W System  : A resource failed to call release.
+10-20 11:13:20.967  2348  2362 W System  : A resource failed to call dispose.
+10-20 11:13:20.967  2348  2362 W System  : A resource failed to call release.
+10-20 11:13:20.967  2348  2362 W System  : A resource failed to call release.
+10-20 11:13:21.364  2348  2369 W GlanceAppWidget: Cannot set the rounded corner of views before Api 31.
+10-20 11:13:21.405  2348  2369 I TestRunner: finished: widget_1x1_usd_dark(ru.madhare74.cbrrates.WidgetScreenshotTest)

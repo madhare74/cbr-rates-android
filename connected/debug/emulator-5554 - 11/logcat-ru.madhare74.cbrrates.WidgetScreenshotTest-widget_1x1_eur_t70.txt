@@ -1,0 +1,9 @@
+10-20 11:13:25.030  2348  2369 I TestRunner: started: widget_1x1_eur_t70(ru.madhare74.cbrrates.WidgetScreenshotTest)
+10-20 11:13:25.226   406   406 I perfetto: probes_producer.cc:329  Producer stop (id=13)
+10-20 11:13:25.227   410   410 I perfetto: ng_service_impl.cc:1948 Tracing session 13 ended, total sessions:0
+10-20 11:13:25.228   406   406 I perfetto: ftrace_procfs.cc:183    disabled ftrace
+10-20 11:13:25.310  2391  2407 W System  : A resource failed to call release.
+10-20 11:13:25.310  2391  2407 I chatty  : uid=10131(ru.madhare74.cbrrates.test) FinalizerDaemon identical 2 lines
+10-20 11:13:25.311  2391  2407 W System  : A resource failed to call release.
+10-20 11:13:25.439  2348  2369 W GlanceAppWidget: Cannot set the rounded corner of views before Api 31.
+10-20 11:13:25.470  2348  2369 I TestRunner: finished: widget_1x1_eur_t70(ru.madhare74.cbrrates.WidgetScreenshotTest)

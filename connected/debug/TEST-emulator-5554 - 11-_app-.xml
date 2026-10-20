@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuite name="ru.madhare74.cbrrates.RatesUiTest" tests="25" failures="0" errors="0" skipped="0" time="17.002" timestamp="2026-10-20T11:13:27" hostname="localhost">
+  <properties>
+    <property name="device" value="emulator-5554 - 11" />
+    <property name="flavor" value="" />
+    <property name="project" value=":app" />
+  </properties>
+  <testcase name="converterOpensAndRecalculates" classname="ru.madhare74.cbrrates.RatesUiTest" time="2.96" />
+  <testcase name="screenOpensAndShowsList" classname="ru.madhare74.cbrrates.RatesUiTest" time="0.861" />
+  <testcase name="converterRespectsNominal" classname="ru.madhare74.cbrrates.RatesUiTest" time="0.912" />
+  <testcase name="errorShownWhenNoData" classname="ru.madhare74.cbrrates.RatesUiTest" time="0.362" />
+  <testcase name="searchFiltersList" classname="ru.madhare74.cbrrates.RatesUiTest" time="0.864" />
+  <testcase name="list_scale200_dark" classname="ru.madhare74.cbrrates.ScreenshotTest" time="0.533" />
+  <testcase name="converter_scale150_dark" classname="ru.madhare74.cbrrates.ScreenshotTest" time="0.634" />
+  <testcase name="list_scale130_dark" classname="ru.madhare74.cbrrates.ScreenshotTest" time="0.355" />
+  <testcase name="widget_config_dark" classname="ru.madhare74.cbrrates.ScreenshotTest" time="0.866" />
+  <testcase name="list_scale100_dark" classname="ru.madhare74.cbrrates.ScreenshotTest" time="0.452" />
+  <testcase name="list_scale150_dark" classname="ru.madhare74.cbrrates.ScreenshotTest" time="0.481" />
+  <testcase name="list_scale100_light" classname="ru.madhare74.cbrrates.ScreenshotTest" time="0.501" />
+  <testcase name="widget_usd_small_dark" classname="ru.madhare74.cbrrates.WidgetScreenshotTest" time="0.604" />
+  <testcase name="widget_1x1_usd_dark" classname="ru.madhare74.cbrrates.WidgetScreenshotTest" time="0.454" />
+  <testcase name="widget_usd_t40_dark" classname="ru.madhare74.cbrrates.WidgetScreenshotTest" time="0.455" />
+  <testcase name="widget_1x1_small_bigfont" classname="ru.madhare74.cbrrates.WidgetScreenshotTest" time="0.459" />
+  <testcase name="widget_kzt_2x2_light" classname="ru.madhare74.cbrrates.WidgetScreenshotTest" time="0.455" />
+  <testcase name="widget_usd_wide_dark" classname="ru.madhare74.cbrrates.WidgetScreenshotTest" time="0.454" />
+  <testcase name="widget_usd_bigfont_dark" classname="ru.madhare74.cbrrates.WidgetScreenshotTest" time="0.454" />
+  <testcase name="widget_usd_2x2_dark" classname="ru.madhare74.cbrrates.WidgetScreenshotTest" time="0.429" />
+  <testcase name="widget_eur_2x2_dark" classname="ru.madhare74.cbrrates.WidgetScreenshotTest" time="0.454" />
+  <testcase name="widget_1x1_kzt_light" classname="ru.madhare74.cbrrates.WidgetScreenshotTest" time="0.453" />
+  <testcase name="widget_1x1_eur_t70" classname="ru.madhare74.cbrrates.WidgetScreenshotTest" time="0.454" />
+  <testcase name="widget_usd_t100_light" classname="ru.madhare74.cbrrates.WidgetScreenshotTest" time="0.428" />
+  <testcase name="widget_eur_t70_dark" classname="ru.madhare74.cbrrates.WidgetScreenshotTest" time="0.455" />
+</testsuite>

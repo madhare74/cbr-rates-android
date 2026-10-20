@@ -1,0 +1,1316 @@
+# 2026-10-20T11:13:27.920372725Z:
+test_suite_meta_data {
+  scheduled_test_case_count: 25
+}
+test_status: PASSED
+test_result {
+  test_case {
+    test_class: "RatesUiTest"
+    test_package: "ru.madhare74.cbrrates"
+    test_method: "converterOpensAndRecalculates"
+    start_time {
+      seconds: 1792494790
+      nanos: 824000000
+    }
+    end_time {
+      seconds: 1792494793
+      nanos: 805000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/logcat-ru.madhare74.cbrrates.RatesUiTest-converterOpensAndRecalculates.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "RatesUiTest"
+    test_package: "ru.madhare74.cbrrates"
+    test_method: "screenOpensAndShowsList"
+    start_time {
+      seconds: 1792494793
+      nanos: 882000000
+    }
+    end_time {
+      seconds: 1792494794
+      nanos: 739000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/logcat-ru.madhare74.cbrrates.RatesUiTest-screenOpensAndShowsList.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "RatesUiTest"
+    test_package: "ru.madhare74.cbrrates"
+    test_method: "converterRespectsNominal"
+    start_time {
+      seconds: 1792494794
+      nanos: 771000000
+    }
+    end_time {
+      seconds: 1792494795
+      nanos: 678000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/logcat-ru.madhare74.cbrrates.RatesUiTest-converterRespectsNominal.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "RatesUiTest"
+    test_package: "ru.madhare74.cbrrates"
+    test_method: "errorShownWhenNoData"
+    start_time {
+      seconds: 1792494795
+      nanos: 687000000
+    }
+    end_time {
+      seconds: 1792494796
+      nanos: 46000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/logcat-ru.madhare74.cbrrates.RatesUiTest-errorShownWhenNoData.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "RatesUiTest"
+    test_package: "ru.madhare74.cbrrates"
+    test_method: "searchFiltersList"
+    start_time {
+      seconds: 1792494796
+      nanos: 76000000
+    }
+    end_time {
+      seconds: 1792494796
+      nanos: 935000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/logcat-ru.madhare74.cbrrates.RatesUiTest-searchFiltersList.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "ScreenshotTest"
+    test_package: "ru.madhare74.cbrrates"
+    test_method: "list_scale200_dark"
+    start_time {
+      seconds: 1792494796
+      nanos: 941000000
+    }
+    end_time {
+      seconds: 1792494797
+      nanos: 471000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/logcat-ru.madhare74.cbrrates.ScreenshotTest-list_scale200_dark.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "ScreenshotTest"
+    test_package: "ru.madhare74.cbrrates"
+    test_method: "converter_scale150_dark"
+    start_time {
+      seconds: 1792494797
+      nanos: 473000000
+    }
+    end_time {
+      seconds: 1792494798
+      nanos: 106000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/logcat-ru.madhare74.cbrrates.ScreenshotTest-converter_scale150_dark.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "ScreenshotTest"
+    test_package: "ru.madhare74.cbrrates"
+    test_method: "list_scale130_dark"
+    start_time {
+      seconds: 1792494798
+      nanos: 111000000
+    }
+    end_time {
+      seconds: 1792494798
+      nanos: 464000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/logcat-ru.madhare74.cbrrates.ScreenshotTest-list_scale130_dark.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "ScreenshotTest"
+    test_package: "ru.madhare74.cbrrates"
+    test_method: "widget_config_dark"
+    start_time {
+      seconds: 1792494798
+      nanos: 467000000
+    }
+    end_time {
+      seconds: 1792494799
+      nanos: 323000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/logcat-ru.madhare74.cbrrates.ScreenshotTest-widget_config_dark.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "ScreenshotTest"
+    test_package: "ru.madhare74.cbrrates"
+    test_method: "list_scale100_dark"
+    start_time {
+      seconds: 1792494799
+      nanos: 326000000
+    }
+    end_time {
+      seconds: 1792494799
+      nanos: 780000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/logcat-ru.madhare74.cbrrates.ScreenshotTest-list_scale100_dark.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "ScreenshotTest"
+    test_package: "ru.madhare74.cbrrates"
+    test_method: "list_scale150_dark"
+    start_time {
+      seconds: 1792494799
+      nanos: 786000000
+    }
+    end_time {
+      seconds: 1792494800
+      nanos: 268000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/logcat-ru.madhare74.cbrrates.ScreenshotTest-list_scale150_dark.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "ScreenshotTest"
+    test_package: "ru.madhare74.cbrrates"
+    test_method: "list_scale100_light"
+    start_time {
+      seconds: 1792494800
+      nanos: 272000000
+    }
+    end_time {
+      seconds: 1792494800
+      nanos: 776000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/logcat-ru.madhare74.cbrrates.ScreenshotTest-list_scale100_light.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "WidgetScreenshotTest"
+    test_package: "ru.madhare74.cbrrates"
+    test_method: "widget_usd_small_dark"
+    start_time {
+      seconds: 1792494800
+      nanos: 779000000
+    }
+    end_time {
+      seconds: 1792494801
+      nanos: 383000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/logcat-ru.madhare74.cbrrates.WidgetScreenshotTest-widget_usd_small_dark.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "WidgetScreenshotTest"
+    test_package: "ru.madhare74.cbrrates"
+    test_method: "widget_1x1_usd_dark"
+    start_time {
+      seconds: 1792494801
+      nanos: 385000000
+    }
+    end_time {
+      seconds: 1792494801
+      nanos: 838000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/logcat-ru.madhare74.cbrrates.WidgetScreenshotTest-widget_1x1_usd_dark.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "WidgetScreenshotTest"
+    test_package: "ru.madhare74.cbrrates"
+    test_method: "widget_usd_t40_dark"
+    start_time {
+      seconds: 1792494801
+      nanos: 841000000
+    }
+    end_time {
+      seconds: 1792494802
+      nanos: 293000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/logcat-ru.madhare74.cbrrates.WidgetScreenshotTest-widget_usd_t40_dark.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "WidgetScreenshotTest"
+    test_package: "ru.madhare74.cbrrates"
+    test_method: "widget_1x1_small_bigfont"
+    start_time {
+      seconds: 1792494802
+      nanos: 296000000
+    }
+    end_time {
+      seconds: 1792494802
+      nanos: 749000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/logcat-ru.madhare74.cbrrates.WidgetScreenshotTest-widget_1x1_small_bigfont.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "WidgetScreenshotTest"
+    test_package: "ru.madhare74.cbrrates"
+    test_method: "widget_kzt_2x2_light"
+    start_time {
+      seconds: 1792494802
+      nanos: 755000000
+    }
+    end_time {
+      seconds: 1792494803
+      nanos: 208000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/logcat-ru.madhare74.cbrrates.WidgetScreenshotTest-widget_kzt_2x2_light.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "WidgetScreenshotTest"
+    test_package: "ru.madhare74.cbrrates"
+    test_method: "widget_usd_wide_dark"
+    start_time {
+      seconds: 1792494803
+      nanos: 211000000
+    }
+    end_time {
+      seconds: 1792494803
+      nanos: 664000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/logcat-ru.madhare74.cbrrates.WidgetScreenshotTest-widget_usd_wide_dark.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "WidgetScreenshotTest"
+    test_package: "ru.madhare74.cbrrates"
+    test_method: "widget_usd_bigfont_dark"
+    start_time {
+      seconds: 1792494803
+      nanos: 666000000
+    }
+    end_time {
+      seconds: 1792494804
+      nanos: 119000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/logcat-ru.madhare74.cbrrates.WidgetScreenshotTest-widget_usd_bigfont_dark.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "WidgetScreenshotTest"
+    test_package: "ru.madhare74.cbrrates"
+    test_method: "widget_usd_2x2_dark"
+    start_time {
+      seconds: 1792494804
+      nanos: 121000000
+    }
+    end_time {
+      seconds: 1792494804
+      nanos: 549000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/logcat-ru.madhare74.cbrrates.WidgetScreenshotTest-widget_usd_2x2_dark.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "WidgetScreenshotTest"
+    test_package: "ru.madhare74.cbrrates"
+    test_method: "widget_eur_2x2_dark"
+    start_time {
+      seconds: 1792494804
+      nanos: 551000000
+    }
+    end_time {
+      seconds: 1792494805
+      nanos: 4000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/logcat-ru.madhare74.cbrrates.WidgetScreenshotTest-widget_eur_2x2_dark.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "WidgetScreenshotTest"
+    test_package: "ru.madhare74.cbrrates"
+    test_method: "widget_1x1_kzt_light"
+    start_time {
+      seconds: 1792494805
+      nanos: 6000000
+    }
+    end_time {
+      seconds: 1792494805
+      nanos: 459000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/logcat-ru.madhare74.cbrrates.WidgetScreenshotTest-widget_1x1_kzt_light.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "WidgetScreenshotTest"
+    test_package: "ru.madhare74.cbrrates"
+    test_method: "widget_1x1_eur_t70"
+    start_time {
+      seconds: 1792494805
+      nanos: 461000000
+    }
+    end_time {
+      seconds: 1792494805
+      nanos: 913000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/logcat-ru.madhare74.cbrrates.WidgetScreenshotTest-widget_1x1_eur_t70.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "WidgetScreenshotTest"
+    test_package: "ru.madhare74.cbrrates"
+    test_method: "widget_usd_t100_light"
+    start_time {
+      seconds: 1792494805
+      nanos: 915000000
+    }
+    end_time {
+      seconds: 1792494806
+      nanos: 343000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/logcat-ru.madhare74.cbrrates.WidgetScreenshotTest-widget_usd_t100_light.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "WidgetScreenshotTest"
+    test_package: "ru.madhare74.cbrrates"
+    test_method: "widget_eur_t70_dark"
+    start_time {
+      seconds: 1792494806
+      nanos: 345000000
+    }
+    end_time {
+      seconds: 1792494806
+      nanos: 797000000
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/logcat-ru.madhare74.cbrrates.WidgetScreenshotTest-widget_eur_t70_dark.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/cpuinfo"
+    }
+  }
+}
+output_artifact {
+  label {
+    label: "test-results.log"
+    namespace: "com.google.testing.platform.runtime.android.driver.AndroidInstrumentationDriver"
+  }
+  source_path {
+    path: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/androidTest-results/connected/debug/emulator-5554 - 11/testlog/test-results.log"
+  }
+  type: TEST_DATA
+  mime_type: "text/plain"
+}
