@@ -1,7 +1,6 @@
 package ru.madhare74.cbrrates
 
 import android.graphics.Bitmap
-import android.os.ParcelFileDescriptor
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.graphics.asAndroidBitmap
 import androidx.compose.ui.platform.LocalDensity
@@ -28,7 +27,7 @@ import java.io.File
 
 /**
  * Снимки экранов при разном системном размере шрифта и в обеих темах — для визуальной
- * проверки вёрстки. Снимки складываются в /data/local/tmp/screenshots на эмуляторе.
+ * проверки вёрстки. Снимки складываются в папку files/screenshots приложения на эмуляторе.
  */
 @RunWith(AndroidJUnit4::class)
 class ScreenshotTest {
@@ -88,13 +87,6 @@ class ScreenshotTest {
         val dir = File(instrumentation.targetContext.getExternalFilesDir(null), "screenshots").apply { mkdirs() }
         val file = File(dir, "$name.png")
         file.outputStream().use { bitmap.compress(Bitmap.CompressFormat.PNG, 100, it) }
-        shell("mkdir -p /data/local/tmp/screenshots")
-        shell("cp ${file.absolutePath} /data/local/tmp/screenshots/$name.png")
-    }
-
-    private fun shell(command: String) {
-        val pfd = InstrumentationRegistry.getInstrumentation().uiAutomation.executeShellCommand(command)
-        ParcelFileDescriptor.AutoCloseInputStream(pfd).use { it.readBytes() }
     }
 
     @Test fun list_scale100_light() { launch(1.0f, dark = false); save("list_scale100_light") }

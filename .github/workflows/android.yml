@@ -99,8 +99,11 @@ jobs:
           disable-animations: true
           emulator-options: -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
           script: |
-            ./gradlew --stacktrace connectedDebugAndroidTest || (adb pull /data/local/tmp/screenshots app/build/screenshots; exit 1)
-            adb pull /data/local/tmp/screenshots app/build/screenshots || true
+            ./gradlew --stacktrace connectedDebugAndroidTest
+            adb install -r app/build/outputs/apk/debug/app-debug.apk > app/build/shots.log 2>&1 || true
+            adb install -r app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk >> app/build/shots.log 2>&1 || true
+            adb shell am instrument -w -e class ru.madhare74.cbrrates.ScreenshotTest ru.madhare74.cbrrates.test/androidx.test.runner.AndroidJUnitRunner >> app/build/shots.log 2>&1 || true
+            adb pull /sdcard/Android/data/ru.madhare74.cbrrates/files/screenshots app/build/screenshots >> app/build/shots.log 2>&1 || true
 
       - name: Отчёт UI-тестов
         if: always()
@@ -118,6 +121,7 @@ jobs:
           mkdir -p out
           cp -r app/build/outputs/androidTest-results/connected out/ || true
           cp -r app/build/screenshots out/ || true
+          cp app/build/shots.log out/ || true
           echo "${GITHUB_SHA}" > out/COMMIT
           cd out
           git init -q -b ui-test-results
