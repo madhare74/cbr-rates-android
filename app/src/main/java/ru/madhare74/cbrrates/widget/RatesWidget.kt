@@ -96,13 +96,14 @@ private fun Tile(model: TileModel?, code: String) {
     // Размеры текста считаем от размера плитки и делим на системный масштаб шрифта,
     // чтобы при крупном шрифте в настройках телефона плитка не «разъезжалась».
     val fontScale = LocalContext.current.resources.configuration.fontScale
-    val base = minOf(size.width.value, size.height.value * 1.1f)
+    // Бюджет по высоте (в долях base): шапка ≈0,30, курс ≈0,26, проценты ≈0,21, подпись ≈0,15.
+    val base = minOf(size.width.value * 0.9f, size.height.value)
     fun sp(dp: Float) = (dp / fontScale).sp
 
-    val rateSize = (base * 0.24f).coerceIn(18f, 64f)
-    val percentSize = rateSize * 0.82f
-    val flagSize = (base * 0.22f).coerceIn(16f, 56f)
-    val smallSize = (base * 0.085f).coerceIn(9f, 16f)
+    val rateSize = base * 0.21f
+    val percentSize = base * 0.17f
+    val flagSize = base * 0.16f
+    val smallSize = (base * 0.08f).coerceAtLeast(9f)
 
     Column(
         modifier = GlanceModifier
@@ -117,7 +118,7 @@ private fun Tile(model: TileModel?, code: String) {
             modifier = GlanceModifier
                 .fillMaxWidth()
                 .background(HeaderBg)
-                .padding(vertical = (base * 0.06f).dp),
+                .padding(vertical = (base * 0.05f).dp),
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalAlignment = Alignment.CenterVertically,
         ) {
@@ -176,7 +177,7 @@ private fun Tile(model: TileModel?, code: String) {
         // Подпись: номинал (если не 1) и дата курса ЦБ
         Text(
             listOfNotNull(model.nominalNote, model.date).joinToString(" · "),
-            modifier = GlanceModifier.padding(bottom = (base * 0.05f).dp),
+            modifier = GlanceModifier.padding(bottom = (base * 0.045f).dp),
             style = TextStyle(color = SubText, fontSize = sp(smallSize), textAlign = TextAlign.Center),
             maxLines = 1,
         )
