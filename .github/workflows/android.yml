@@ -6,6 +6,9 @@ on:
   pull_request:
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
@@ -44,6 +47,23 @@ jobs:
           name: kursy-cb-debug-apk
           path: app/build/outputs/apk/debug/*.apk
           if-no-files-found: error
+
+      # APK и результаты тестов дополнительно кладутся в ветку `apk`,
+      # чтобы их можно было забрать обычным git без доступа к хранилищу артефактов.
+      - name: Опубликовать APK в ветку apk
+        if: github.event_name != 'pull_request'
+        env:
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          mkdir -p out
+          cp app/build/outputs/apk/debug/app-debug.apk out/kursy-cb-debug.apk
+          cp -r app/build/test-results/testDebugUnitTest out/unit-test-results
+          echo "${GITHUB_SHA}" > out/COMMIT
+          cd out
+          git init -q -b apk
+          git add .
+          git -c user.name=github-actions -c user.email=github-actions@users.noreply.github.com commit -qm "APK ${GITHUB_SHA::7}"
+          git push -q -f "https://x-access-token:${TOKEN}@github.com/${GITHUB_REPOSITORY}.git" apk
 
   ui-tests:
     name: UI-тесты на эмуляторе
@@ -87,3 +107,17 @@ jobs:
           name: ui-test-report
           path: app/build/reports/androidTests/
           if-no-files-found: ignore
+
+      - name: Опубликовать результаты UI-тестов в ветку ui-test-results
+        if: always() && github.event_name != 'pull_request'
+        env:
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          mkdir -p out
+          cp -r app/build/outputs/androidTest-results/connected out/ || true
+          echo "${GITHUB_SHA}" > out/COMMIT
+          cd out
+          git init -q -b ui-test-results
+          git add .
+          git -c user.name=github-actions -c user.email=github-actions@users.noreply.github.com commit -qm "UI tests ${GITHUB_SHA::7}"
+          git push -q -f "https://x-access-token:${TOKEN}@github.com/${GITHUB_REPOSITORY}.git" ui-test-results
