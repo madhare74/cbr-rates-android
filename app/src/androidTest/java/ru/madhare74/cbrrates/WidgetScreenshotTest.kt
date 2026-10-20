@@ -116,6 +116,16 @@ class WidgetScreenshotTest {
     @Test fun widget_usd_t100_light() =
         render("widget_usd_t100_light", "USD", DpSize(150.dp, 150.dp), dark = false, transparency = 100)
 
+    // 1×1 на Samsung S24 Ultra (сетка 4×N): ячейка ≈ 80×95 dp
+    @Test fun widget_1x1_usd_dark() = render("widget_1x1_usd_dark", "USD", DpSize(80.dp, 92.dp), dark = true)
+
+    @Test fun widget_1x1_eur_t70() = render("widget_1x1_eur_t70", "EUR", DpSize(80.dp, 92.dp), dark = true, transparency = 70)
+
+    @Test fun widget_1x1_kzt_light() = render("widget_1x1_kzt_light", "KZT", DpSize(80.dp, 92.dp), dark = false)
+
+    @Test fun widget_1x1_small_bigfont() =
+        render("widget_1x1_small_bigfont", "XDR", DpSize(68.dp, 76.dp), dark = true, fontScale = 1.5f)
+
     @Test fun widget_usd_bigfont_dark() =
         render("widget_usd_bigfont_dark", "USD", DpSize(150.dp, 150.dp), dark = true, fontScale = 1.5f)
 }

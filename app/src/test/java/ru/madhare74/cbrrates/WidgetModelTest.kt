@@ -68,6 +68,14 @@ class WidgetModelTest {
     }
 
     @Test
+    fun `long numbers get smaller font to fit width`() {
+        val short = WidgetModels.fitWidth("81,12", 70f)
+        val long = WidgetModels.fitWidth("1 111,22", 70f)
+        assert(long < short)
+        assert(long * 8 * 0.58f <= 70.01f)
+    }
+
+    @Test
     fun `percent rounding`() {
         assertEquals("−0,54%", WidgetModels.percent(BigDecimal("83.00"), BigDecimal("-0.4507")))
     }

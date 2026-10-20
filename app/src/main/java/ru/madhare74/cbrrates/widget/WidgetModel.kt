@@ -21,6 +21,8 @@ data class TileModel(
     val rate: String,
     /** «за 100 KZT», если номинал не 1. */
     val nominalNote: String?,
+    /** Номинал: курс указан за столько единиц валюты. */
+    val nominal: Int,
     /** «−0,54%», «+0,12%», «0,00%» или null, если прошлого курса нет. */
     val percent: String?,
     val direction: Direction?,
@@ -29,6 +31,15 @@ data class TileModel(
 )
 
 object WidgetModels {
+    /** Плитка меньше этого (в dp) — компактная, «размером с иконку»: без подписи с датой. */
+    const val COMPACT_BELOW = 105f
+
+    /**
+     * Размер шрифта, при котором [text] (жирный) влезает в [widthDp] по ширине.
+     * Средняя ширина цифры жирного Roboto ≈ 0,58 от размера шрифта.
+     */
+    fun fitWidth(text: String, widthDp: Float): Float = widthDp / (text.length.coerceAtLeast(1) * 0.58f)
+
     const val DEFAULT_CODE = "USD"
     private val SHORT_DATE: DateTimeFormatter = DateTimeFormatter.ofPattern("dd.MM")
     private const val MINUS = "−"

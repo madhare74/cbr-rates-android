@@ -109,14 +109,18 @@ private fun Tile(model: TileModel?, code: String, transparency: Int) {
     // Размеры считаются от размера плитки в dp и не зависят от системного размера шрифта,
     // чтобы при крупном шрифте в настройках телефона плитка не «разъезжалась».
     val fontScale = LocalContext.current.resources.configuration.fontScale
-    // Бюджет по высоте (в долях base): шапка ≈0,30, курс ≈0,26, проценты ≈0,21, подпись ≈0,15.
+    // Компактная плитка (1×1, размером с иконку): шапка ≈0,33, курс ≈0,33, проценты ≈0,25, без подписи.
+    // Обычная: шапка ≈0,30, курс ≈0,26, проценты ≈0,21, подпись ≈0,15.
     val base = minOf(size.width.value * 0.9f, size.height.value)
+    val compact = base < WidgetModels.COMPACT_BELOW
     fun sp(dp: Float) = (dp / fontScale).sp
 
-    val rateSize = base * 0.21f
-    val percentSize = base * 0.17f
-    val flagSize = base * 0.16f
+    val textWidth = size.width.value - 10f
+    val rateSize = minOf(base * (if (compact) 0.27f else 0.21f), WidgetModels.fitWidth(model?.rate ?: "", textWidth))
+    val percentSize = minOf(base * (if (compact) 0.2f else 0.17f), WidgetModels.fitWidth(model?.percent ?: "", textWidth))
+    val flagSize = base * (if (compact) 0.2f else 0.16f)
     val smallSize = (base * 0.08f).coerceAtLeast(9f)
+    val corner = if (compact) 16.dp else 22.dp
 
     val overlay = WidgetStyle.isOverlay(transparency)
     val o = WidgetStyle.Overlay
@@ -145,7 +149,7 @@ private fun Tile(model: TileModel?, code: String, transparency: Int) {
     Column(
         modifier = GlanceModifier
             .fillMaxSize()
-            .cornerRadius(22.dp)
+            .cornerRadius(corner)
             .background(tileBg)
             .clickable(actionStartActivity<MainActivity>()),
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -155,12 +159,19 @@ private fun Tile(model: TileModel?, code: String, transparency: Int) {
             modifier = GlanceModifier
                 .fillMaxWidth()
                 .background(headerBg)
-                .padding(vertical = (base * 0.05f).dp),
+                .padding(vertical = (base * (if (compact) 0.04f else 0.05f)).dp),
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalAlignment = Alignment.CenterVertically,
         ) {
             Text(model?.flag ?: Flags.emoji(code), style = TextStyle(fontSize = sp(flagSize)))
-            Spacer(GlanceModifier.width((base * 0.16f).dp))
+            if (compact && model != null && model.nominal != 1) {
+                // В компактной плитке подписи нет — номинал показываем между флагами.
+                Spacer(GlanceModifier.width((base * 0.04f).dp))
+                Label("×${model.nominal}", flagSize * 0.55f, { it.sub }, bold = true)
+                Spacer(GlanceModifier.width((base * 0.04f).dp))
+            } else {
+                Spacer(GlanceModifier.width((base * 0.16f).dp))
+            }
             Text(model?.rubFlag ?: Flags.emoji("RUB"), style = TextStyle(fontSize = sp(flagSize)))
         }
         Box(GlanceModifier.fillMaxWidth().height(1.dp).background(divider)) {}
@@ -170,7 +181,7 @@ private fun Tile(model: TileModel?, code: String, transparency: Int) {
                 modifier = GlanceModifier.fillMaxSize().padding(8.dp),
                 contentAlignment = Alignment.Center,
             ) {
-                Label("$code\nНет данных.\nОткройте приложение", smallSize * 1.2f, { it.sub }, bold = false)
+                Label(if (compact) "Нет\nданных" else "$code\nНет данных.\nОткройте приложение", smallSize * 1.2f, { it.sub }, bold = false)
             }
             return@Column
         }
@@ -191,8 +202,10 @@ private fun Tile(model: TileModel?, code: String, transparency: Int) {
             }
         }
         // Подпись: номинал (если не 1) и дата курса ЦБ
-        Box(modifier = GlanceModifier.padding(bottom = (base * 0.045f).dp)) {
-            Label(listOfNotNull(model.nominalNote, model.date).joinToString(" · "), smallSize, { it.sub }, bold = false)
+        if (!compact) {
+            Box(modifier = GlanceModifier.padding(bottom = (base * 0.045f).dp)) {
+                Label(listOfNotNull(model.nominalNote, model.date).joinToString(" · "), smallSize, { it.sub }, bold = false)
+            }
         }
     }
 }
