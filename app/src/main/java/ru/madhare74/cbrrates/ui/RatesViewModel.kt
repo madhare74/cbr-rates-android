@@ -31,6 +31,8 @@ data class RatesUiState(
 class RatesViewModel(
     private val repository: RatesRepository,
     private val favoritesStore: FavoritesStore,
+    /** Вызывается, когда сохранённые курсы или избранное изменились (обновить виджеты). */
+    private val onDataChanged: () -> Unit = {},
 ) : ViewModel() {
 
     private val _state = MutableStateFlow(
@@ -54,6 +56,7 @@ class RatesViewModel(
         }
         loadJob = viewModelScope.launch {
             val result = repository.load()
+            if (result is LoadResult.Fresh) onDataChanged()
             _state.update { current ->
                 when (result) {
                     is LoadResult.Fresh -> current.copy(data = result.data, notice = null, error = null)
@@ -83,6 +86,7 @@ class RatesViewModel(
         val favorites = _state.value.favorites
         val updated = if (code in favorites) favorites - code else favorites + code
         favoritesStore.save(updated)
+        onDataChanged()
         _state.update { it.copy(favorites = updated) }
     }
 }

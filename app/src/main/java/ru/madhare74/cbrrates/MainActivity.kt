@@ -16,14 +16,34 @@ import ru.madhare74.cbrrates.data.RatesRepository
 import ru.madhare74.cbrrates.ui.CbrTheme
 import ru.madhare74.cbrrates.ui.RatesApp
 import ru.madhare74.cbrrates.ui.RatesViewModel
+import ru.madhare74.cbrrates.widget.RatesUpdateWorker
+import ru.madhare74.cbrrates.widget.RatesWidget
+import androidx.glance.appwidget.updateAll
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.SupervisorJob
+import kotlinx.coroutines.launch
 
 class CbrApp : Application() {
     val repository by lazy { RatesRepository(HttpCbrSource(), PrefsRatesCache(this)) }
     val favoritesStore by lazy { PrefsFavoritesStore(this) }
 
+    private val appScope = CoroutineScope(SupervisorJob() + Dispatchers.Default)
+
+    override fun onCreate() {
+        super.onCreate()
+        // Расписание фонового обновления — только если на экране есть виджеты.
+        if (RatesUpdateWorker.hasWidgets(this)) RatesUpdateWorker.schedule(this)
+    }
+
+    /** Перерисовать виджеты после свежей загрузки в приложении. */
+    fun updateWidgets() {
+        appScope.launch { runCatching { RatesWidget().updateAll(this@CbrApp) } }
+    }
+
     val viewModelFactory: ViewModelProvider.Factory
         get() = viewModelFactory {
-            initializer { RatesViewModel(repository, favoritesStore) }
+            initializer { RatesViewModel(repository, favoritesStore, onDataChanged = ::updateWidgets) }
         }
 }
 

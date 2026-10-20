@@ -31,7 +31,8 @@ jobs:
       - name: Unit-тесты и сборка APK
         run: |
           chmod +x gradlew
-          ./gradlew --stacktrace testDebugUnitTest assembleDebug
+          ./gradlew --stacktrace testDebugUnitTest assembleDebug 2>&1 | tee build.log
+          exit ${PIPESTATUS[0]}
 
       - name: Отчёт unit-тестов
         if: always()
@@ -65,6 +66,18 @@ jobs:
           git -c user.name=github-actions -c user.email=github-actions@users.noreply.github.com commit -qm "APK ${GITHUB_SHA::7}"
           git push -q -f "https://x-access-token:${TOKEN}@github.com/${GITHUB_REPOSITORY}.git" apk
 
+      - name: Опубликовать лог сборки при ошибке
+        if: failure() && github.event_name != 'pull_request'
+        env:
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          mkdir -p logs && cp build.log logs/ || true
+          cp -r app/build/test-results logs/ || true
+          echo "${GITHUB_SHA}" > logs/COMMIT
+          cd logs && git init -q -b ci-logs-build && git add . && \
+          git -c user.name=github-actions -c user.email=github-actions@users.noreply.github.com commit -qm "log ${GITHUB_SHA::7}" && \
+          git push -q -f "https://x-access-token:${TOKEN}@github.com/${GITHUB_REPOSITORY}.git" ci-logs-build
+
   ui-tests:
     name: UI-тесты на эмуляторе
     runs-on: ubuntu-latest
@@ -88,7 +101,8 @@ jobs:
       - name: Собрать тестовые APK
         run: |
           chmod +x gradlew
-          ./gradlew --stacktrace assembleDebug assembleDebugAndroidTest
+          ./gradlew --stacktrace assembleDebug assembleDebugAndroidTest 2>&1 | tee assemble.log
+          exit ${PIPESTATUS[0]}
 
       - name: UI-тесты
         uses: reactivecircus/android-emulator-runner@v2
@@ -99,10 +113,10 @@ jobs:
           disable-animations: true
           emulator-options: -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
           script: |
-            ./gradlew --stacktrace connectedDebugAndroidTest
+            ./gradlew --stacktrace connectedDebugAndroidTest > app/build/connected.log 2>&1 || (tail -100 app/build/connected.log; exit 1)
             adb install -r app/build/outputs/apk/debug/app-debug.apk > app/build/shots.log 2>&1 || true
             adb install -r app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk >> app/build/shots.log 2>&1 || true
-            adb shell am instrument -w -e class ru.madhare74.cbrrates.ScreenshotTest ru.madhare74.cbrrates.test/androidx.test.runner.AndroidJUnitRunner >> app/build/shots.log 2>&1 || true
+            adb shell am instrument -w -e class ru.madhare74.cbrrates.ScreenshotTest,ru.madhare74.cbrrates.WidgetScreenshotTest ru.madhare74.cbrrates.test/androidx.test.runner.AndroidJUnitRunner >> app/build/shots.log 2>&1 || true
             mkdir -p app/build/screenshots
             adb exec-out run-as ru.madhare74.cbrrates tar -c files/screenshots > app/build/shots.tar 2>> app/build/shots.log || true
             tar -xf app/build/shots.tar -C app/build/screenshots --strip-components=2 >> app/build/shots.log 2>&1 || true
@@ -124,6 +138,7 @@ jobs:
           cp -r app/build/outputs/androidTest-results/connected out/ || true
           cp -r app/build/screenshots out/ || true
           cp app/build/shots.log out/ || true
+          cp app/build/connected.log assemble.log out/ || true
           echo "${GITHUB_SHA}" > out/COMMIT
           cd out
           git init -q -b ui-test-results
