@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ru.madhare74.cbrrates.WidgetModelTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2026-10-20T11:11:55" hostname="runnervmxehtw" time="0.029">
+  <properties/>
+  <testcase name="nominal is shown in caption" classname="ru.madhare74.cbrrates.WidgetModelTest" time="0.005"/>
+  <testcase name="long numbers get smaller font to fit width" classname="ru.madhare74.cbrrates.WidgetModelTest" time="0.003"/>
+  <testcase name="small rates keep precision" classname="ru.madhare74.cbrrates.WidgetModelTest" time="0.003"/>
+  <testcase name="unchanged rate" classname="ru.madhare74.cbrrates.WidgetModelTest" time="0.003"/>
+  <testcase name="usd tile" classname="ru.madhare74.cbrrates.WidgetModelTest" time="0.003"/>
+  <testcase name="no previous day means no percent" classname="ru.madhare74.cbrrates.WidgetModelTest" time="0.003"/>
+  <testcase name="missing data or currency gives null" classname="ru.madhare74.cbrrates.WidgetModelTest" time="0.002"/>
+  <testcase name="percent rounding" classname="ru.madhare74.cbrrates.WidgetModelTest" time="0.002"/>
+  <testcase name="falling rate has minus sign" classname="ru.madhare74.cbrrates.WidgetModelTest" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

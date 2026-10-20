@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ru.madhare74.cbrrates.WidgetStyleTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-20T11:11:55" hostname="runnervmxehtw" time="0.015">
+  <properties/>
+  <testcase name="background alpha follows transparency" classname="ru.madhare74.cbrrates.WidgetStyleTest" time="0.015"/>
+  <testcase name="white text with shadow from 50 percent" classname="ru.madhare74.cbrrates.WidgetStyleTest" time="0.0"/>
+  <testcase name="transparency maps to opacity" classname="ru.madhare74.cbrrates.WidgetStyleTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
