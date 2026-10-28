@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ru.madhare74.cbrrates.RatesRepositoryTest" tests="12" skipped="0" failures="0" errors="0" timestamp="2026-10-28T02:52:53" hostname="runnervmtai0g" time="0.19">
+  <properties/>
+  <testcase name="unparsable response without saved data is failure" classname="ru.madhare74.cbrrates.RatesRepositoryTest" time="0.113"/>
+  <testcase name="successful load stores fetch time, failed load keeps old one" classname="ru.madhare74.cbrrates.RatesRepositoryTest" time="0.011"/>
+  <testcase name="saved data is readable after successful load" classname="ru.madhare74.cbrrates.RatesRepositoryTest" time="0.015"/>
+  <testcase name="unparsable response keeps saved data and does not overwrite cache" classname="ru.madhare74.cbrrates.RatesRepositoryTest" time="0.009"/>
+  <testcase name="no network without saved data is failure" classname="ru.madhare74.cbrrates.RatesRepositoryTest" time="0.003"/>
+  <testcase name="fresh load returns current and previous and saves them" classname="ru.madhare74.cbrrates.RatesRepositoryTest" time="0.005"/>
+  <testcase name="tls error is secure connection problem" classname="ru.madhare74.cbrrates.RatesRepositoryTest" time="0.004"/>
+  <testcase name="previous day failure still shows current rates" classname="ru.madhare74.cbrrates.RatesRepositoryTest" time="0.003"/>
+  <testcase name="unknown host counts as no connection" classname="ru.madhare74.cbrrates.RatesRepositoryTest" time="0.001"/>
+  <testcase name="previous lookup steps back when cbr returns the same date" classname="ru.madhare74.cbrrates.RatesRepositoryTest" time="0.008"/>
+  <testcase name="no network with saved data shows saved data with notice" classname="ru.madhare74.cbrrates.RatesRepositoryTest" time="0.006"/>
+  <testcase name="http error is server error" classname="ru.madhare74.cbrrates.RatesRepositoryTest" time="0.01"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

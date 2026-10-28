@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ru.madhare74.cbrrates.CbrXmlParserTest" tests="12" skipped="0" failures="0" errors="0" timestamp="2026-10-28T02:52:53" hostname="runnervmtai0g" time="0.161">
+  <properties/>
+  <testcase name="comma decimal separator is parsed" classname="ru.madhare74.cbrrates.CbrXmlParserTest" time="0.069"/>
+  <testcase name="missing date is a parse error" classname="ru.madhare74.cbrrates.CbrXmlParserTest" time="0.009"/>
+  <testcase name="parseDecimal handles comma and spaces" classname="ru.madhare74.cbrrates.CbrXmlParserTest" time="0.005"/>
+  <testcase name="nominal is parsed and unit rate accounts for it" classname="ru.madhare74.cbrrates.CbrXmlParserTest" time="0.004"/>
+  <testcase name="decode keeps cyrillic and parse of decoded text gives same result" classname="ru.madhare74.cbrrates.CbrXmlParserTest" time="0.013"/>
+  <testcase name="empty rates list is a parse error" classname="ru.madhare74.cbrrates.CbrXmlParserTest" time="0.004"/>
+  <testcase name="garbage is a parse error" classname="ru.madhare74.cbrrates.CbrXmlParserTest" time="0.022"/>
+  <testcase name="windows-1251 names are decoded" classname="ru.madhare74.cbrrates.CbrXmlParserTest" time="0.01"/>
+  <testcase name="all currencies are read" classname="ru.madhare74.cbrrates.CbrXmlParserTest" time="0.005"/>
+  <testcase name="date is taken from ValCurs Date attribute" classname="ru.madhare74.cbrrates.CbrXmlParserTest" time="0.003"/>
+  <testcase name="html instead of xml is a parse error" classname="ru.madhare74.cbrrates.CbrXmlParserTest" time="0.01"/>
+  <testcase name="utf-8 declared response is also supported" classname="ru.madhare74.cbrrates.CbrXmlParserTest" time="0.005"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[[Fatal Error] :1:1: Content is not allowed in prolog.
+]]></system-err>
+</testsuite>

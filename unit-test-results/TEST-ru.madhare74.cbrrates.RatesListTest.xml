@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ru.madhare74.cbrrates.RatesListTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-10-28T02:52:53" hostname="runnervmtai0g" time="0.054">
+  <properties/>
+  <testcase name="favorites are pinned on top in their order" classname="ru.madhare74.cbrrates.RatesListTest" time="0.012"/>
+  <testcase name="no-break label wraps only around equals sign" classname="ru.madhare74.cbrrates.RatesListTest" time="0.014"/>
+  <testcase name="header contains cbr date" classname="ru.madhare74.cbrrates.RatesListTest" time="0.006"/>
+  <testcase name="rate label shows nominal when not 1" classname="ru.madhare74.cbrrates.RatesListTest" time="0.004"/>
+  <testcase name="flags" classname="ru.madhare74.cbrrates.RatesListTest" time="0.009"/>
+  <testcase name="search by code and by russian name, case insensitive" classname="ru.madhare74.cbrrates.RatesListTest" time="0.008"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
