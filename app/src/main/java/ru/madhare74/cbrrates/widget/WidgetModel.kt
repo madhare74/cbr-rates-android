@@ -28,6 +28,10 @@ data class TileModel(
     val direction: Direction?,
     /** «20.10» — дата, на которую ЦБ установил курс. */
     val date: String,
+    /** Курс не удалось проверить в последнее время по расписанию (10:00 / 16:00). */
+    val stale: Boolean = false,
+    /** «27.10» — дата последней успешной проверки, показывается на несвежей плитке. */
+    val checkedDate: String? = null,
 )
 
 object WidgetModels {
@@ -69,7 +73,10 @@ object WidgetModels {
         }
     }
 
-    fun build(data: RatesData?, code: String): TileModel? {
+    /** Текст вместо процентов на несвежей плитке: «⚠ 27.10». */
+    fun staleLabel(checkedDate: String?): String = "⚠\u00A0" + (checkedDate ?: "—")
+
+    fun build(data: RatesData?, code: String, nowMillis: Long = System.currentTimeMillis()): TileModel? {
         if (data == null) return null
         val rate = data.current.byCode(code) ?: return null
         val change = Changes.computeAll(data)[code]
@@ -83,6 +90,10 @@ object WidgetModels {
             percent = change?.let { percent(rate.value, it.delta) },
             direction = change?.let { if (percent(rate.value, it.delta) == "0,00%") Direction.SAME else it.direction },
             date = data.current.date.format(SHORT_DATE),
+            stale = UpdateSchedule.isStale(data.fetchedAt, nowMillis),
+            checkedDate = data.fetchedAt?.let {
+                java.time.Instant.ofEpochMilli(it).atZone(java.time.ZoneId.systemDefault()).format(SHORT_DATE)
+            },
         )
     }
 }

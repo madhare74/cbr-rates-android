@@ -38,7 +38,7 @@ class RatesUpdateWorker(context: Context, params: WorkerParameters) : CoroutineW
     companion object {
         private const val PERIODIC = "rates_widget_periodic"
         private const val NOW = "rates_widget_now"
-        private const val MAX_RETRIES = 3
+        private const val MAX_RETRIES = 4
 
         private val network = Constraints.Builder()
             .setRequiredNetworkType(NetworkType.CONNECTED)
@@ -50,7 +50,9 @@ class RatesUpdateWorker(context: Context, params: WorkerParameters) : CoroutineW
             return ids.isNotEmpty()
         }
 
+        /** Будильник на 10:00 и 16:00 плюс запасное фоновое обновление раз в 12 часов. */
         fun schedule(context: Context) {
+            UpdateAlarm.scheduleNext(context)
             val request = PeriodicWorkRequestBuilder<RatesUpdateWorker>(12, TimeUnit.HOURS, 2, TimeUnit.HOURS)
                 .setConstraints(network)
                 .setBackoffCriteria(BackoffPolicy.EXPONENTIAL, 15, TimeUnit.MINUTES)
@@ -62,12 +64,13 @@ class RatesUpdateWorker(context: Context, params: WorkerParameters) : CoroutineW
         fun refreshNow(context: Context) {
             val request = OneTimeWorkRequestBuilder<RatesUpdateWorker>()
                 .setConstraints(network)
-                .setBackoffCriteria(BackoffPolicy.EXPONENTIAL, 1, TimeUnit.MINUTES)
+                .setBackoffCriteria(BackoffPolicy.EXPONENTIAL, 15, TimeUnit.MINUTES)
                 .build()
             WorkManager.getInstance(context).enqueueUniqueWork(NOW, ExistingWorkPolicy.REPLACE, request)
         }
 
         fun cancel(context: Context) {
+            UpdateAlarm.cancel(context)
             WorkManager.getInstance(context).cancelUniqueWork(PERIODIC)
         }
     }

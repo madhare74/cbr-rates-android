@@ -38,15 +38,18 @@ class WidgetScreenshotTest {
     private fun fixture(name: String): ByteArray =
         instrumentation.context.assets.open(name).use { it.readBytes() }
 
-    @Before
-    fun saveSampleRates() {
+    private fun saveSampleRates(fetchedAt: Long) {
         PrefsRatesCache(target).write(
             CachedRates(
                 CbrXmlParser.decode(fixture("cbr_current.xml")),
                 CbrXmlParser.decode(fixture("cbr_previous.xml")),
+                fetchedAt,
             ),
         )
     }
+
+    @Before
+    fun saveFreshRates() = saveSampleRates(System.currentTimeMillis())
 
     private fun themed(dark: Boolean, fontScale: Float): Context {
         val config = Configuration(target.resources.configuration).apply {
@@ -125,6 +128,21 @@ class WidgetScreenshotTest {
 
     @Test fun widget_1x1_small_bigfont() =
         render("widget_1x1_small_bigfont", "XDR", DpSize(68.dp, 76.dp), dark = true, fontScale = 1.5f)
+
+    // Несвежий курс: последняя успешная проверка 3 дня назад
+    private fun stale(name: String, code: String, size: DpSize, dark: Boolean, transparency: Int = 10) {
+        saveSampleRates(System.currentTimeMillis() - 3 * 24 * 3600_000L)
+        render(name, code, size, dark, transparency = transparency)
+    }
+
+    @Test fun widget_stale_1x1_dark() = stale("widget_stale_1x1_dark", "USD", DpSize(80.dp, 92.dp), dark = true)
+
+    @Test fun widget_stale_1x1_light() = stale("widget_stale_1x1_light", "EUR", DpSize(80.dp, 92.dp), dark = false)
+
+    @Test fun widget_stale_1x1_t100() =
+        stale("widget_stale_1x1_t100", "USD", DpSize(80.dp, 92.dp), dark = true, transparency = 100)
+
+    @Test fun widget_stale_2x2_dark() = stale("widget_stale_2x2_dark", "KZT", DpSize(150.dp, 150.dp), dark = true)
 
     @Test fun widget_usd_bigfont_dark() =
         render("widget_usd_bigfont_dark", "USD", DpSize(150.dp, 150.dp), dark = true, fontScale = 1.5f)

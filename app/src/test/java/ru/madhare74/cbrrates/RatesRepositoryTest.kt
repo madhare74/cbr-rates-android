@@ -132,6 +132,16 @@ class RatesRepositoryTest {
     }
 
     @Test
+    fun `successful load stores fetch time, failed load keeps old one`() = runTest {
+        val cache = InMemoryRatesCache()
+        RatesRepository(FixtureSource(), cache, clock = { 1_000L }).load()
+        assertEquals(1_000L, cache.read()!!.fetchedAt)
+        val offline = RatesRepository(OfflineSource(), cache, clock = { 2_000L }).load() as LoadResult.Cached
+        assertEquals(1_000L, offline.data.fetchedAt)
+        assertEquals(1_000L, cache.read()!!.fetchedAt)
+    }
+
+    @Test
     fun `saved data is readable after successful load`() = runTest {
         val cache = InMemoryRatesCache()
         RatesRepository(FixtureSource(), cache).load()

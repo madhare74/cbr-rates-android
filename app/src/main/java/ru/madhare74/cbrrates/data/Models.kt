@@ -28,4 +28,6 @@ data class RatesSnapshot(
 data class RatesData(
     val current: RatesSnapshot,
     val previous: RatesSnapshot?,
+    /** Когда курсы последний раз успешно получены с сайта ЦБ (мс с 1970), null — неизвестно. */
+    val fetchedAt: Long? = null,
 )

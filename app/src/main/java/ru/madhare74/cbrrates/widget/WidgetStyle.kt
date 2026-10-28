@@ -20,7 +20,12 @@ object WidgetStyle {
         val sub: Color,
         val up: Color,
         val down: Color,
+        /** Цвет пометки «курс несвежий». */
+        val stale: Color,
     )
+
+    /** Заливка шапки несвежей плитки — яркая и непрозрачная, видна издалека. */
+    val STALE_FILL = Color(0xFFFFA000)
 
     val Day = Palette(
         tile = Color(0xFFF4F4F6),
@@ -30,6 +35,7 @@ object WidgetStyle {
         sub = Color(0xFF6B6D73),
         up = Color(0xFF2E7D32),
         down = Color(0xFFC62828),
+        stale = Color(0xFFB85000),
     )
 
     val Night = Palette(
@@ -40,6 +46,7 @@ object WidgetStyle {
         sub = Color(0xFF9A9BA1),
         up = Color(0xFF6FD47A),
         down = Color(0xFFFF7A70),
+        stale = Color(0xFFFFB74D),
     )
 
     /** Цвета текста поверх обоев (белый с тенью). */
@@ -51,6 +58,7 @@ object WidgetStyle {
         sub = Color(0xE6FFFFFF),
         up = Color(0xFF7CF08A),
         down = Color(0xFFFF8A80),
+        stale = Color(0xFFFFC107),
     )
 
     const val SHADOW = 0xB3000000.toInt()

@@ -117,7 +117,9 @@ private fun Tile(model: TileModel?, code: String, transparency: Int) {
 
     val textWidth = size.width.value - 10f
     val rateSize = minOf(base * (if (compact) 0.27f else 0.21f), WidgetModels.fitWidth(model?.rate ?: "", textWidth))
-    val percentSize = minOf(base * (if (compact) 0.2f else 0.17f), WidgetModels.fitWidth(model?.percent ?: "", textWidth))
+    val stale = model?.stale == true
+    val secondLine = if (stale) WidgetModels.staleLabel(model?.checkedDate) else model?.percent
+    val percentSize = minOf(base * (if (compact) 0.2f else 0.17f), WidgetModels.fitWidth(secondLine ?: "", textWidth))
     val flagSize = base * (if (compact) 0.2f else 0.16f)
     val smallSize = (base * 0.08f).coerceAtLeast(9f)
     val corner = if (compact) 16.dp else 22.dp
@@ -125,8 +127,14 @@ private fun Tile(model: TileModel?, code: String, transparency: Int) {
     val overlay = WidgetStyle.isOverlay(transparency)
     val o = WidgetStyle.Overlay
     val tileBg = dayNight(transparency, { it.tile }, fade = true)
-    val headerBg = dayNight(transparency, { it.header }, fade = true)
-    val divider = if (overlay) ColorProvider(o.divider) else dayNight(transparency, { it.divider }, fade = true)
+    // Несвежий курс: шапка залита ярко-оранжевым независимо от прозрачности —
+    // это видно издалека и без очков, даже на самой маленькой плитке.
+    val headerBg = if (stale) ColorProvider(WidgetStyle.STALE_FILL) else dayNight(transparency, { it.header }, fade = true)
+    val divider = when {
+        stale -> ColorProvider(WidgetStyle.STALE_FILL)
+        overlay -> ColorProvider(o.divider)
+        else -> dayNight(transparency, { it.divider }, fade = true)
+    }
 
     @Composable
     fun Label(text: String, sizeDp: Float, pick: (WidgetStyle.Palette) -> Color, bold: Boolean) {
@@ -174,7 +182,7 @@ private fun Tile(model: TileModel?, code: String, transparency: Int) {
             }
             Text(model?.rubFlag ?: Flags.emoji("RUB"), style = TextStyle(fontSize = sp(flagSize)))
         }
-        Box(GlanceModifier.fillMaxWidth().height(1.dp).background(divider)) {}
+        Box(GlanceModifier.fillMaxWidth().height(if (stale) 2.dp else 1.dp).background(divider)) {}
 
         if (model == null) {
             Box(
@@ -191,14 +199,21 @@ private fun Tile(model: TileModel?, code: String, transparency: Int) {
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalAlignment = Alignment.CenterVertically,
         ) {
-            Label(model.rate, rateSize, { it.main }, bold = true)
-            model.percent?.let {
-                val pick: (WidgetStyle.Palette) -> Color = when (model.direction) {
-                    Direction.UP -> { p -> p.up }
-                    Direction.DOWN -> { p -> p.down }
-                    else -> { p -> p.sub }
+            // У несвежего курса число приглушено, а вместо процентов — «⚠ 27.10»
+            // (дата последней успешной проверки) крупным оранжевым шрифтом.
+            val rateColor: (WidgetStyle.Palette) -> Color = if (stale) WidgetStyle.Palette::sub else WidgetStyle.Palette::main
+            Label(model.rate, rateSize, rateColor, bold = true)
+            if (stale) {
+                Label(WidgetModels.staleLabel(model.checkedDate), percentSize, { it.stale }, bold = true)
+            } else {
+                model.percent?.let {
+                    val pick: (WidgetStyle.Palette) -> Color = when (model.direction) {
+                        Direction.UP -> { p -> p.up }
+                        Direction.DOWN -> { p -> p.down }
+                        else -> { p -> p.sub }
+                    }
+                    Label(it, percentSize, pick, bold = true)
                 }
-                Label(it, percentSize, pick, bold = true)
             }
         }
         // Подпись: номинал (если не 1) и дата курса ЦБ

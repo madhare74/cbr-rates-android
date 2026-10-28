@@ -33,6 +33,7 @@ sealed interface LoadResult {
 class RatesRepository(
     private val source: RatesSource,
     private val cache: RatesCache,
+    private val clock: () -> Long = System::currentTimeMillis,
 ) {
 
     /** Сохранённые на устройстве курсы, если они есть и читаются. */
@@ -41,7 +42,7 @@ class RatesRepository(
         return try {
             val current = CbrXmlParser.parse(cached.currentXml)
             val previous = cached.previousXml?.let { runCatching { CbrXmlParser.parse(it) }.getOrNull() }
-            RatesData(current, previous)
+            RatesData(current, previous, cached.fetchedAt)
         } catch (e: Exception) {
             null
         }
@@ -52,8 +53,9 @@ class RatesRepository(
             val currentXml = CbrXmlParser.decode(source.fetch(null))
             val current = CbrXmlParser.parse(currentXml)
             val (previous, previousXml) = loadPrevious(current)
-            cache.write(CachedRates(currentXml, previousXml))
-            LoadResult.Fresh(RatesData(current, previous))
+            val now = clock()
+            cache.write(CachedRates(currentXml, previousXml, now))
+            LoadResult.Fresh(RatesData(current, previous, now))
         } catch (e: CancellationException) {
             throw e
         } catch (e: Exception) {

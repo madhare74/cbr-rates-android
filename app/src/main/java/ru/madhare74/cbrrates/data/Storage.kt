@@ -6,6 +6,8 @@ import android.content.Context
 data class CachedRates(
     val currentXml: String,
     val previousXml: String?,
+    /** Время успешной загрузки с сайта ЦБ (мс с 1970). */
+    val fetchedAt: Long? = null,
 )
 
 interface RatesCache {
@@ -25,19 +27,22 @@ class PrefsRatesCache(context: Context) : RatesCache {
 
     override fun read(): CachedRates? {
         val current = prefs.getString(KEY_CURRENT, null) ?: return null
-        return CachedRates(current, prefs.getString(KEY_PREVIOUS, null))
+        val fetchedAt = prefs.getLong(KEY_FETCHED_AT, 0L).takeIf { it > 0L }
+        return CachedRates(current, prefs.getString(KEY_PREVIOUS, null), fetchedAt)
     }
 
     override fun write(value: CachedRates) {
         prefs.edit()
             .putString(KEY_CURRENT, value.currentXml)
             .putString(KEY_PREVIOUS, value.previousXml)
-            .apply()
+            .putLong(KEY_FETCHED_AT, value.fetchedAt ?: 0L)
+            .commit()
     }
 
     private companion object {
         const val KEY_CURRENT = "current_xml"
         const val KEY_PREVIOUS = "previous_xml"
+        const val KEY_FETCHED_AT = "fetched_at"
     }
 }
 
