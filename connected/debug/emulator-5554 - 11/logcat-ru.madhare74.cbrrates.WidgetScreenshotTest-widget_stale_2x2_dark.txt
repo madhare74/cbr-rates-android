@@ -1,0 +1,10 @@
+10-28 02:55:16.847  2356  2377 I TestRunner: started: widget_stale_2x2_dark(ru.madhare74.cbrrates.WidgetScreenshotTest)
+10-28 02:55:16.952   391   391 I perfetto: probes_producer.cc:329  Producer stop (id=9)
+10-28 02:55:16.952   407   407 I perfetto: ng_service_impl.cc:1948 Tracing session 9 ended, total sessions:3
+10-28 02:55:17.198   694   694 V AvrcpMediaPlayerList: mPackageChangedBroadcastReceiver: action: android.intent.action.PACKAGE_CHANGED
+10-28 02:55:17.198   694   694 D AvrcpMediaPlayerList: Name of package changed: ru.madhare74.cbrrates
+10-28 02:55:17.201   502   594 I InputReader: Reconfiguring input devices, changes=KEYBOARD_LAYOUTS |
+10-28 02:55:17.219  1055  1055 D CarrierSvcBindHelper: No carrier app for: 0
+10-28 02:55:17.223   728   760 I PermissionControllerServiceImpl: Updating user sensitive for uid 10130
+10-28 02:55:17.261  2356  2377 W GlanceAppWidget: Cannot set the rounded corner of views before Api 31.
+10-28 02:55:17.303  2356  2377 I TestRunner: finished: widget_stale_2x2_dark(ru.madhare74.cbrrates.WidgetScreenshotTest)

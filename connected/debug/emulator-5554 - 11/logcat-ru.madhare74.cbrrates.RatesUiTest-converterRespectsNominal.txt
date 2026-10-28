@@ -1,0 +1,145 @@
+10-28 02:55:10.554  2356  2377 I TestRunner: started: converterRespectsNominal(ru.madhare74.cbrrates.RatesUiTest)
+10-28 02:55:10.559  2356  2377 D IdlingRegistry: Registering idling resources: [androidx.compose.ui.test.EspressoLink@3ce4b9c]
+10-28 02:55:10.561  2356  2377 W Settings: Setting always_finish_activities has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+10-28 02:55:10.562   325   325 E Layer   : [Surface(name=Task=12)/@0x518d679 - animation-leash#0] No local sync point found
+10-28 02:55:10.562   325   325 I chatty  : uid=1000(system) /system/bin/surfaceflinger identical 1 line
+10-28 02:55:10.562   325   325 E Layer   : [Surface(name=Task=12)/@0x518d679 - animation-leash#0] No local sync point found
+10-28 02:55:10.562   325   325 E Layer   : [Surface(name=Task=1)/@0x54f74be - animation-leash#0] No local sync point found
+10-28 02:55:10.562   325   325 I chatty  : uid=1000(system) /system/bin/surfaceflinger identical 1 line
+10-28 02:55:10.562   325   325 E Layer   : [Surface(name=Task=1)/@0x54f74be - animation-leash#0] No local sync point found
+10-28 02:55:10.654   502   538 D EventSequenceValidator: Transition from ACTIVITY_CANCELLED to INTENT_STARTED
+10-28 02:55:10.657   502   538 D EventSequenceValidator: Transition from INTENT_STARTED to ACTIVITY_LAUNCHED
+10-28 02:55:10.755   299   299 D goldfish-address-space: claimShared: Ask to claim region [0x3fedd2000 0x3fee9a000]
+10-28 02:55:10.767   502   533 W InputReader: Device virtio_input_multi_touch_10 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:10.767   502   533 W InputReader: Device virtio_input_multi_touch_7 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:10.767   502   533 W InputReader: Device virtio_input_multi_touch_4 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:10.767   502   533 W InputReader: Device virtio_input_multi_touch_5 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:10.767   502   533 W InputReader: Device virtio_input_multi_touch_2 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:10.767   502   533 W InputReader: Device virtio_input_multi_touch_6 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:10.767   502   533 W InputReader: Device virtio_input_multi_touch_3 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:10.767   502   533 W InputReader: Device virtio_input_multi_touch_8 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:10.767   502   533 W InputReader: Device virtio_input_multi_touch_9 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:10.767   502   533 W InputReader: Device virtio_input_multi_touch_11 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:10.767   502   533 W InputReader: Device virtio_input_multi_touch_10 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:10.767   502   533 W InputReader: Device virtio_input_multi_touch_7 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:10.767   502   533 W InputReader: Device virtio_input_multi_touch_4 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:10.767   502   533 W InputReader: Device virtio_input_multi_touch_5 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:10.767   502   533 W InputReader: Device virtio_input_multi_touch_2 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:10.767   502   533 W InputReader: Device virtio_input_multi_touch_6 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:10.767   502   533 W InputReader: Device virtio_input_multi_touch_3 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:10.767   502   533 W InputReader: Device virtio_input_multi_touch_8 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:10.767   502   533 W InputReader: Device virtio_input_multi_touch_9 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:10.767   502   533 W InputReader: Device virtio_input_multi_touch_11 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:10.774  2356  2356 D LifecycleMonitor: Lifecycle status change: androidx.activity.ComponentActivity@a6d16a3 in: PRE_ON_CREATE
+10-28 02:55:10.775  2356  2356 V ActivityScenario: Activity lifecycle changed event received but ignored because the reported transition was not ON_CREATE while the last known transition was PRE_ON_CREATE
+10-28 02:55:10.782  2356  2356 D LifecycleMonitor: Lifecycle status change: androidx.activity.ComponentActivity@a6d16a3 in: CREATED
+10-28 02:55:10.782  2356  2356 V ActivityScenario: Update currentActivityStage to CREATED, currentActivity=androidx.activity.ComponentActivity@a6d16a3
+10-28 02:55:10.787  2356  2356 D LifecycleMonitor: Lifecycle status change: androidx.activity.ComponentActivity@a6d16a3 in: STARTED
+10-28 02:55:10.787  2356  2356 V ActivityScenario: Update currentActivityStage to STARTED, currentActivity=androidx.activity.ComponentActivity@a6d16a3
+10-28 02:55:10.788  2356  2356 D LifecycleMonitor: Lifecycle status change: androidx.activity.ComponentActivity@a6d16a3 in: RESUMED
+10-28 02:55:10.788  2356  2356 V ActivityScenario: Update currentActivityStage to RESUMED, currentActivity=androidx.activity.ComponentActivity@a6d16a3
+10-28 02:55:10.791   502  2444 D HostConnection: HostConnection::get() New Host Connection established 0x721fe2de1710, tid 2444
+10-28 02:55:10.794   502  2444 D HostConnection: HostComposition ext ANDROID_EMU_CHECKSUM_HELPER_v1 ANDROID_EMU_native_sync_v2 ANDROID_EMU_dma_v1 ANDROID_EMU_direct_mem ANDROID_EMU_host_composition_v1 ANDROID_EMU_host_composition_v2 ANDROID_EMU_vulkan ANDROID_EMU_deferred_vulkan_commands ANDROID_EMU_vulkan_null_optional_strings ANDROID_EMU_vulkan_create_resources_with_requirements ANDROID_EMU_YUV_Cache ANDROID_EMU_vulkan_ignored_handles ANDROID_EMU_has_shared_slots_host_memory_allocator ANDROID_EMU_vulkan_free_memory_sync ANDROID_EMU_vulkan_shader_float16_int8 ANDROID_EMU_vulkan_async_queue_submit ANDROID_EMU_sync_buffer_data ANDROID_EMU_vulkan_async_qsri ANDROID_EMU_read_color_buffer_dma ANDROID_EMU_hwc_color_transform GL_OES_EGL_image_external_essl3 GL_OES_vertex_array_object GL_KHR_texture_compression_astc_ldr ANDROID_EMU_host_side_tracing ANDROID_EMU_gles_max_version_3_0
+10-28 02:55:10.796   325   325 E Layer   : [Surface(name=Task=12)/@0x518d679 - animation-leash#0] No local sync point found
+10-28 02:55:10.796   325   325 E Layer   : [Surface(name=Task=1)/@0x54f74be - animation-leash#0] No local sync point found
+10-28 02:55:10.797   502  2444 D EGL_emulation: eglCreateContext: 0x721fd2e6f090: maj 3 min 0 rcv 3
+10-28 02:55:10.799   502  2444 D EGL_emulation: eglMakeCurrent: 0x721fd2e6f090: ver 3 0 (tinfo 0x721f72ef7160) (first time)
+10-28 02:55:10.810   299   299 D goldfish-address-space: claimShared: Ask to claim region [0x3fee9a000 0x3fef62000]
+10-28 02:55:10.943   299  1927 D goldfish-address-space: claimShared: Ask to claim region [0x3fef62000 0x3ff02a000]
+10-28 02:55:10.949   299  1927 D goldfish-address-space: claimShared: Ask to claim region [0x3ff02a000 0x3ff0f2000]
+10-28 02:55:10.951   502   543 D ArtManagerInternalImpl: /data/misc/iorapd/ru.madhare74.cbrrates/1/androidx.activity.ComponentActivity/compiled_traces/compiled_trace.pb doesn't exist
+10-28 02:55:10.951   502   538 D EventSequenceValidator: Transition from ACTIVITY_LAUNCHED to ACTIVITY_FINISHED
+10-28 02:55:10.952   502   543 I ActivityTaskManager: Displayed ru.madhare74.cbrrates/androidx.activity.ComponentActivity: +301ms
+10-28 02:55:10.962   325   325 E Layer   : [Surface(name=Task=12)/@0x518d679 - animation-leash#0] No local sync point found
+10-28 02:55:10.962   325   325 E Layer   : [Surface(name=Task=12)/@0x518d679 - animation-leash#0] No local sync point found
+10-28 02:55:10.962   325   325 E Layer   : [Surface(name=Task=1)/@0x54f74be - animation-leash#0] No local sync point found
+10-28 02:55:10.962   325   325 E Layer   : [Surface(name=Task=1)/@0x54f74be - animation-leash#0] No local sync point found
+10-28 02:55:11.191   502  2444 D HostConnection: HostConnection::get() New Host Connection established 0x721fe2dddf90, tid 2444
+10-28 02:55:11.192   502  2444 D HostConnection: HostComposition ext ANDROID_EMU_CHECKSUM_HELPER_v1 ANDROID_EMU_native_sync_v2 ANDROID_EMU_dma_v1 ANDROID_EMU_direct_mem ANDROID_EMU_host_composition_v1 ANDROID_EMU_host_composition_v2 ANDROID_EMU_vulkan ANDROID_EMU_deferred_vulkan_commands ANDROID_EMU_vulkan_null_optional_strings ANDROID_EMU_vulkan_create_resources_with_requirements ANDROID_EMU_YUV_Cache ANDROID_EMU_vulkan_ignored_handles ANDROID_EMU_has_shared_slots_host_memory_allocator ANDROID_EMU_vulkan_free_memory_sync ANDROID_EMU_vulkan_shader_float16_int8 ANDROID_EMU_vulkan_async_queue_submit ANDROID_EMU_sync_buffer_data ANDROID_EMU_vulkan_async_qsri ANDROID_EMU_read_color_buffer_dma ANDROID_EMU_hwc_color_transform GL_OES_EGL_image_external_essl3 GL_OES_vertex_array_object GL_KHR_texture_compression_astc_ldr ANDROID_EMU_host_side_tracing ANDROID_EMU_gles_max_version_3_0
+10-28 02:55:11.194   502  2444 D EGL_emulation: eglCreateContext: 0x721fd2e9ac70: maj 3 min 0 rcv 3
+10-28 02:55:11.195   502  2444 D EGL_emulation: eglMakeCurrent: 0x721fd2e9ac70: ver 3 0 (tinfo 0x721f72ef7160) (first time)
+10-28 02:55:11.386  1318  1318 I LatinIME: Starting input. Cursor position = 0,0
+10-28 02:55:11.440   316   316 I android.hardware.vibrator-service.example: Vibrator reporting capabilities
+10-28 02:55:11.449   299   299 D goldfish-address-space: claimShared: Ask to claim region [0x3ff0f2000 0x3ff1b3000]
+10-28 02:55:11.453   299   299 D goldfish-address-space: claimShared: Ask to claim region [0x3ff1b3000 0x3ff274000]
+10-28 02:55:11.456   299   299 D goldfish-address-space: claimShared: Ask to claim region [0x3ff274000 0x3ff335000]
+10-28 02:55:11.485   299   299 D goldfish-address-space: claimShared: Ask to claim region [0x3ff335000 0x3ff3fd000]
+10-28 02:55:11.490   299   299 D goldfish-address-space: claimShared: Ask to claim region [0x3ff3fd000 0x3ff4c5000]
+10-28 02:55:11.528   299   299 D goldfish-address-space: claimShared: Ask to claim region [0x3ff4c5000 0x3ff58d000]
+10-28 02:55:11.549   502   538 D EventSequenceValidator: Transition from ACTIVITY_FINISHED to INTENT_STARTED
+10-28 02:55:11.551   407   407 I perfetto: ing_service_impl.cc:758 Configured tracing session 8, #sources:1, duration:5000 ms, #buffers:1, total buffer size:4096 KB, total sessions:4, uid:1071 session name: ""
+10-28 02:55:11.551   391   391 I perfetto: probes_producer.cc:230  Ftrace setup (target_buf=8)
+10-28 02:55:11.553   502   538 D EventSequenceValidator: Transition from INTENT_STARTED to ACTIVITY_LAUNCHED
+10-28 02:55:11.554  2356  2356 D LifecycleMonitor: Lifecycle status change: androidx.activity.ComponentActivity@a6d16a3 in: PAUSED
+10-28 02:55:11.555  2356  2356 V ActivityScenario: Update currentActivityStage to PAUSED, currentActivity=androidx.activity.ComponentActivity@a6d16a3
+10-28 02:55:11.555   502  1261 W InputReader: Device virtio_input_multi_touch_10 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:11.555   502  1261 W InputReader: Device virtio_input_multi_touch_7 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:11.555   502  1261 W InputReader: Device virtio_input_multi_touch_4 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:11.555   502  1261 W InputReader: Device virtio_input_multi_touch_5 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:11.555   502  1261 W InputReader: Device virtio_input_multi_touch_2 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:11.555   502  1261 W InputReader: Device virtio_input_multi_touch_6 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:11.555   502  1261 W InputReader: Device virtio_input_multi_touch_3 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:11.555   502  1261 W InputReader: Device virtio_input_multi_touch_8 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:11.555   502  1261 W InputReader: Device virtio_input_multi_touch_9 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:11.555   502  1261 W InputReader: Device virtio_input_multi_touch_11 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:11.555   502  1261 W InputReader: Device virtio_input_multi_touch_10 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:11.555   502  1261 W InputReader: Device virtio_input_multi_touch_7 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:11.555   502  1261 W InputReader: Device virtio_input_multi_touch_4 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:11.555   502  1261 W InputReader: Device virtio_input_multi_touch_5 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:11.555   502  1261 W InputReader: Device virtio_input_multi_touch_2 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:11.555   502  1261 W InputReader: Device virtio_input_multi_touch_6 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:11.555   502  1261 W InputReader: Device virtio_input_multi_touch_3 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:11.555   502  1261 W InputReader: Device virtio_input_multi_touch_8 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:11.555   502  1261 W InputReader: Device virtio_input_multi_touch_9 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:11.555   502  1261 W InputReader: Device virtio_input_multi_touch_11 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:11.569   299   299 D goldfish-address-space: claimShared: Ask to claim region [0x3ff58d000 0x3ff655000]
+10-28 02:55:11.575   279   279 I Zygote  : Process 1286 exited due to signal 9 (Killed)
+10-28 02:55:11.583   299   299 D goldfish-address-space: claimShared: Ask to claim region [0x3ff655000 0x3ff71d000]
+10-28 02:55:11.591   299   299 D goldfish-address-space: claimShared: Ask to claim region [0x3ff4c5000 0x3ff58d000]
+10-28 02:55:11.595   502   538 D EventSequenceValidator: Transition from ACTIVITY_LAUNCHED to ACTIVITY_CANCELLED
+10-28 02:55:11.601   502   546 I libprocessgroup: Successfully killed process cgroup uid 10064 pid 1286 in 42ms
+10-28 02:55:11.602   299   299 D goldfish-address-space: claimShared: Ask to claim region [0x3ff335000 0x3ff3fd000]
+10-28 02:55:11.605   299   299 D goldfish-address-space: claimShared: Ask to claim region [0x3ff71d000 0x3ff7e5000]
+10-28 02:55:11.610   299   299 D goldfish-address-space: claimShared: Ask to claim region [0x3ff7e5000 0x3ff8ad000]
+10-28 02:55:11.619   502   623 W InputReader: Device virtio_input_multi_touch_10 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:11.619   502   623 W InputReader: Device virtio_input_multi_touch_7 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:11.619   502   623 W InputReader: Device virtio_input_multi_touch_4 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:11.619   502   623 W InputReader: Device virtio_input_multi_touch_5 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:11.619   502   623 W InputReader: Device virtio_input_multi_touch_2 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:11.619   502   623 W InputReader: Device virtio_input_multi_touch_6 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:11.619   502   623 W InputReader: Device virtio_input_multi_touch_3 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:11.619   502   623 W InputReader: Device virtio_input_multi_touch_8 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:11.619   502   623 W InputReader: Device virtio_input_multi_touch_9 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:11.619   502   623 W InputReader: Device virtio_input_multi_touch_11 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:11.619   502   623 W InputReader: Device virtio_input_multi_touch_10 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:11.619   502   623 W InputReader: Device virtio_input_multi_touch_7 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:11.619   502   623 W InputReader: Device virtio_input_multi_touch_4 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:11.619   502   623 W InputReader: Device virtio_input_multi_touch_5 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:11.619   502   623 W InputReader: Device virtio_input_multi_touch_2 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:11.619   502   623 W InputReader: Device virtio_input_multi_touch_6 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:11.619   502   623 W InputReader: Device virtio_input_multi_touch_3 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:11.619   502   623 W InputReader: Device virtio_input_multi_touch_8 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:11.619   502   623 W InputReader: Device virtio_input_multi_touch_9 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:11.619   502   623 W InputReader: Device virtio_input_multi_touch_11 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:11.621   299   299 D goldfish-address-space: claimShared: Ask to claim region [0x3ff8ad000 0x3ff975000]
+10-28 02:55:11.625  2356  2356 D LifecycleMonitor: Lifecycle status change: androidx.activity.ComponentActivity@a6d16a3 in: STOPPED
+10-28 02:55:11.628  2356  2356 V ActivityScenario: Update currentActivityStage to STOPPED, currentActivity=androidx.activity.ComponentActivity@a6d16a3
+10-28 02:55:11.649  2356  2356 D LifecycleMonitor: Lifecycle status change: androidx.activity.ComponentActivity@a6d16a3 in: DESTROYED
+10-28 02:55:11.649  2356  2356 V ActivityScenario: Update currentActivityStage to DESTROYED, currentActivity=null
+10-28 02:55:11.652   714   714 D InterruptionStateProvider: No bubble up: not allowed to bubble: -1|android|8|null|1000
+10-28 02:55:11.652   299   299 D goldfish-address-space: claimShared: Ask to claim region [0x3ff335000 0x3ff3fd000]
+10-28 02:55:11.653   714   714 D InterruptionStateProvider: No heads up: unimportant notification: -1|android|8|null|1000
+10-28 02:55:11.655   299   299 D goldfish-address-space: claimShared: Ask to claim region [0x3ff58d000 0x3ff655000]
+10-28 02:55:11.657   299   299 D goldfish-address-space: claimShared: Ask to claim region [0x3ff975000 0x3ffa3d000]
+10-28 02:55:11.661   714   714 D InterruptionStateProvider: No bubble up: not allowed to bubble: -1|android|8|null|1000
+10-28 02:55:11.661   714   714 D InterruptionStateProvider: No heads up: unimportant notification: -1|android|8|null|1000
+10-28 02:55:11.679   714   714 D InterruptionStateProvider: No bubble up: not allowed to bubble: -1|android|8|null|1000
+10-28 02:55:11.681   714   714 D InterruptionStateProvider: No heads up: unimportant notification: -1|android|8|null|1000
+10-28 02:55:11.686  2356  2377 D IdlingRegistry: Unregistering idling resources: [androidx.compose.ui.test.EspressoLink@3ce4b9c]
+10-28 02:55:11.696   325   325 E Layer   : [Surface(name=Task=1)/@0x54f74be - animation-leash#0] No local sync point found
+10-28 02:55:11.696   325   325 I chatty  : uid=1000(system) /system/bin/surfaceflinger identical 1 line
+10-28 02:55:11.696   325   325 E Layer   : [Surface(name=Task=1)/@0x54f74be - animation-leash#0] No local sync point found
+10-28 02:55:11.696   325   325 E Layer   : [Surface(name=Task=14)/@0xdf0553e - animation-leash#0] No local sync point found
+10-28 02:55:11.696   325   325 I chatty  : uid=1000(system) /system/bin/surfaceflinger identical 1 line
+10-28 02:55:11.696   325   325 E Layer   : [Surface(name=Task=14)/@0xdf0553e - animation-leash#0] No local sync point found
+10-28 02:55:11.701  2356  2377 I TestRunner: finished: converterRespectsNominal(ru.madhare74.cbrrates.RatesUiTest)

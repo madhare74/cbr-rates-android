@@ -1,0 +1,3 @@
+10-28 02:55:18.647  2356  2377 I TestRunner: started: widget_usd_wide_dark(ru.madhare74.cbrrates.WidgetScreenshotTest)
+10-28 02:55:19.058  2356  2377 W GlanceAppWidget: Cannot set the rounded corner of views before Api 31.
+10-28 02:55:19.097  2356  2377 I TestRunner: finished: widget_usd_wide_dark(ru.madhare74.cbrrates.WidgetScreenshotTest)

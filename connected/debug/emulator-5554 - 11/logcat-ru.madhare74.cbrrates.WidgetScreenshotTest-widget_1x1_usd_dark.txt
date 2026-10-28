@@ -1,0 +1,16 @@
+10-28 02:55:16.396  2356  2377 I TestRunner: started: widget_1x1_usd_dark(ru.madhare74.cbrrates.WidgetScreenshotTest)
+10-28 02:55:16.437  2356  2370 W System  : A resource failed to call release.
+10-28 02:55:16.437  2356  2370 I chatty  : uid=10130(ru.madhare74.cbrrates) FinalizerDaemon identical 2 lines
+10-28 02:55:16.438  2356  2370 W System  : A resource failed to call release.
+10-28 02:55:16.439  2356  2370 W System  : A resource failed to call dispose.
+10-28 02:55:16.439  2356  2370 W System  : A resource failed to call release.
+10-28 02:55:16.439  2356  2370 W System  : A resource failed to call dispose.
+10-28 02:55:16.440  2356  2370 W System  : A resource failed to call dispose.
+10-28 02:55:16.440  2356  2370 W System  : A resource failed to call release.
+10-28 02:55:16.440  2356  2370 W System  : A resource failed to call dispose.
+10-28 02:55:16.440  2356  2370 W System  : A resource failed to call dispose.
+10-28 02:55:16.441  2356  2370 W System  : A resource failed to call release.
+10-28 02:55:16.552   391   391 I perfetto: probes_producer.cc:329  Producer stop (id=8)
+10-28 02:55:16.553   407   407 I perfetto: ng_service_impl.cc:1948 Tracing session 8 ended, total sessions:4
+10-28 02:55:16.807  2356  2377 W GlanceAppWidget: Cannot set the rounded corner of views before Api 31.
+10-28 02:55:16.846  2356  2377 I TestRunner: finished: widget_1x1_usd_dark(ru.madhare74.cbrrates.WidgetScreenshotTest)

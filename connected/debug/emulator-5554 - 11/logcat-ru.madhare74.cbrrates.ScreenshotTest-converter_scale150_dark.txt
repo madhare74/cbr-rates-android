@@ -1,0 +1,112 @@
+10-28 02:55:13.351  2356  2377 I TestRunner: started: converter_scale150_dark(ru.madhare74.cbrrates.ScreenshotTest)
+10-28 02:55:13.354  2356  2377 D IdlingRegistry: Registering idling resources: [androidx.compose.ui.test.EspressoLink@17c4ce4]
+10-28 02:55:13.356   299   299 D goldfish-address-space: claimShared: Ask to claim region [0x3ff58d000 0x3ff655000]
+10-28 02:55:13.358  2356  2377 W Settings: Setting always_finish_activities has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+10-28 02:55:13.359   299   299 D goldfish-address-space: claimShared: Ask to claim region [0x3ff7e5000 0x3ff8ad000]
+10-28 02:55:13.362   299   299 D goldfish-address-space: claimShared: Ask to claim region [0x3ff8ad000 0x3ff975000]
+10-28 02:55:13.368   502   538 D EventSequenceValidator: Transition from ACTIVITY_FINISHED to INTENT_STARTED
+10-28 02:55:13.373   407   407 E perfetto: ing_service_impl.cc:605 Too many concurrent tracing sesions (5) for uid 1071 limit is 5
+10-28 02:55:13.374   416  1044 E perfetto: r_api_deprecated.cc:216 Tracing session failed
+10-28 02:55:13.374   502   538 D EventSequenceValidator: Transition from INTENT_STARTED to ACTIVITY_LAUNCHED
+10-28 02:55:13.375   502   642 W InputReader: Device virtio_input_multi_touch_10 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:13.375   502   642 W InputReader: Device virtio_input_multi_touch_7 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:13.375   502   642 W InputReader: Device virtio_input_multi_touch_4 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:13.375   502   642 W InputReader: Device virtio_input_multi_touch_5 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:13.375   502   642 W InputReader: Device virtio_input_multi_touch_2 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:13.375   502   642 W InputReader: Device virtio_input_multi_touch_6 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:13.375   502   642 W InputReader: Device virtio_input_multi_touch_3 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:13.375   502   642 W InputReader: Device virtio_input_multi_touch_8 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:13.375   502   642 W InputReader: Device virtio_input_multi_touch_9 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:13.375   502   642 W InputReader: Device virtio_input_multi_touch_11 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:13.375   502   642 W InputReader: Device virtio_input_multi_touch_10 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:13.375   502   642 W InputReader: Device virtio_input_multi_touch_7 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:13.375   502   642 W InputReader: Device virtio_input_multi_touch_4 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:13.375   502   642 W InputReader: Device virtio_input_multi_touch_5 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:13.375   502   642 W InputReader: Device virtio_input_multi_touch_2 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:13.375   502   642 W InputReader: Device virtio_input_multi_touch_6 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:13.375   502   642 W InputReader: Device virtio_input_multi_touch_3 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:13.375   502   642 W InputReader: Device virtio_input_multi_touch_8 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:13.375   502   642 W InputReader: Device virtio_input_multi_touch_9 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:13.375   502   642 W InputReader: Device virtio_input_multi_touch_11 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:13.379   325   325 E Layer   : [Surface(name=Task=18)/@0xbbfd745 - animation-leash#0] No local sync point found
+10-28 02:55:13.379   325   325 E Layer   : [Surface(name=Task=1)/@0x54f74be - animation-leash#0] No local sync point found
+10-28 02:55:13.383  2356  2356 D LifecycleMonitor: Lifecycle status change: androidx.activity.ComponentActivity@df0f38b in: PRE_ON_CREATE
+10-28 02:55:13.383  2356  2356 V ActivityScenario: Activity lifecycle changed event received but ignored because the reported transition was not ON_CREATE while the last known transition was PRE_ON_CREATE
+10-28 02:55:13.386   299   299 D goldfish-address-space: claimShared: Ask to claim region [0x3feb7a000 0x3fec42000]
+10-28 02:55:13.387  2356  2356 D LifecycleMonitor: Lifecycle status change: androidx.activity.ComponentActivity@df0f38b in: CREATED
+10-28 02:55:13.387  2356  2356 V ActivityScenario: Update currentActivityStage to CREATED, currentActivity=androidx.activity.ComponentActivity@df0f38b
+10-28 02:55:13.391  2356  2356 D LifecycleMonitor: Lifecycle status change: androidx.activity.ComponentActivity@df0f38b in: STARTED
+10-28 02:55:13.392  2356  2356 V ActivityScenario: Update currentActivityStage to STARTED, currentActivity=androidx.activity.ComponentActivity@df0f38b
+10-28 02:55:13.392  2356  2356 D LifecycleMonitor: Lifecycle status change: androidx.activity.ComponentActivity@df0f38b in: RESUMED
+10-28 02:55:13.392  2356  2356 V ActivityScenario: Update currentActivityStage to RESUMED, currentActivity=androidx.activity.ComponentActivity@df0f38b
+10-28 02:55:13.404   299   299 D goldfish-address-space: claimShared: Ask to claim region [0x3ffd56000 0x3ffe1e000]
+10-28 02:55:13.406   299   299 D goldfish-address-space: claimShared: Ask to claim region [0x3ffe1e000 0x3ffee6000]
+10-28 02:55:13.407   299   299 D goldfish-address-space: claimShared: Ask to claim region [0x3ff975000 0x3ffa3d000]
+10-28 02:55:13.410   502   543 D ArtManagerInternalImpl: /data/misc/iorapd/ru.madhare74.cbrrates/1/androidx.activity.ComponentActivity/compiled_traces/compiled_trace.pb doesn't exist
+10-28 02:55:13.411   502   543 I ActivityTaskManager: Displayed ru.madhare74.cbrrates/androidx.activity.ComponentActivity: +49ms
+10-28 02:55:13.411   502   538 D EventSequenceValidator: Transition from ACTIVITY_LAUNCHED to ACTIVITY_FINISHED
+10-28 02:55:13.668   502   538 D EventSequenceValidator: Transition from ACTIVITY_FINISHED to INTENT_STARTED
+10-28 02:55:13.669   407   407 E perfetto: ing_service_impl.cc:605 Too many concurrent tracing sesions (5) for uid 1071 limit is 5
+10-28 02:55:13.669   416  1044 E perfetto: r_api_deprecated.cc:216 Tracing session failed
+10-28 02:55:13.671  2356  2356 D LifecycleMonitor: Lifecycle status change: androidx.activity.ComponentActivity@df0f38b in: PAUSED
+10-28 02:55:13.671  2356  2356 V ActivityScenario: Update currentActivityStage to PAUSED, currentActivity=androidx.activity.ComponentActivity@df0f38b
+10-28 02:55:13.672   502   538 D EventSequenceValidator: Transition from INTENT_STARTED to ACTIVITY_LAUNCHED
+10-28 02:55:13.672   502   642 W InputReader: Device virtio_input_multi_touch_10 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:13.672   502   642 W InputReader: Device virtio_input_multi_touch_7 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:13.672   502   642 W InputReader: Device virtio_input_multi_touch_4 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:13.672   502   642 W InputReader: Device virtio_input_multi_touch_5 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:13.672   502   642 W InputReader: Device virtio_input_multi_touch_2 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:13.672   502   642 W InputReader: Device virtio_input_multi_touch_6 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:13.672   502   642 W InputReader: Device virtio_input_multi_touch_3 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:13.672   502   642 W InputReader: Device virtio_input_multi_touch_8 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:13.672   502   642 W InputReader: Device virtio_input_multi_touch_9 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:13.672   502   642 W InputReader: Device virtio_input_multi_touch_11 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:13.672   502   642 W InputReader: Device virtio_input_multi_touch_10 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:13.672   502   642 W InputReader: Device virtio_input_multi_touch_7 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:13.672   502   642 W InputReader: Device virtio_input_multi_touch_4 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:13.672   502   642 W InputReader: Device virtio_input_multi_touch_5 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:13.672   502   642 W InputReader: Device virtio_input_multi_touch_2 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:13.672   502   642 W InputReader: Device virtio_input_multi_touch_6 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:13.672   502   642 W InputReader: Device virtio_input_multi_touch_3 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:13.672   502   642 W InputReader: Device virtio_input_multi_touch_8 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:13.672   502   642 W InputReader: Device virtio_input_multi_touch_9 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:13.672   502   642 W InputReader: Device virtio_input_multi_touch_11 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:13.683   299   299 D goldfish-address-space: claimShared: Ask to claim region [0x3feb7a000 0x3fec42000]
+10-28 02:55:13.687   299   299 D goldfish-address-space: claimShared: Ask to claim region [0x3ff58d000 0x3ff655000]
+10-28 02:55:13.694   279   279 I Zygote  : Process 1994 exited due to signal 9 (Killed)
+10-28 02:55:13.702   299   299 D goldfish-address-space: claimShared: Ask to claim region [0x3ffbc6000 0x3ffc8e000]
+10-28 02:55:13.704   299   299 D goldfish-address-space: claimShared: Ask to claim region [0x3ffd56000 0x3ffe1e000]
+10-28 02:55:13.704   299   299 D goldfish-address-space: claimShared: Ask to claim region [0x3ff7e5000 0x3ff8ad000]
+10-28 02:55:13.706  2356  2356 D LifecycleMonitor: Lifecycle status change: androidx.activity.ComponentActivity@df0f38b in: STOPPED
+10-28 02:55:13.706  2356  2356 V ActivityScenario: Update currentActivityStage to STOPPED, currentActivity=androidx.activity.ComponentActivity@df0f38b
+10-28 02:55:13.710   299   299 D goldfish-address-space: claimShared: Ask to claim region [0x3ff8ad000 0x3ff975000]
+10-28 02:55:13.716   502   543 D ArtManagerInternalImpl: /data/misc/iorapd/ru.madhare74.cbrrates.test/0/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity/compiled_traces/compiled_trace.pb doesn't exist
+10-28 02:55:13.716   502   543 I ActivityTaskManager: Displayed ru.madhare74.cbrrates.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity: +41ms
+10-28 02:55:13.716   502   546 I libprocessgroup: Successfully killed process cgroup uid 10098 pid 1994 in 42ms
+10-28 02:55:13.718   502   538 D EventSequenceValidator: Transition from ACTIVITY_LAUNCHED to ACTIVITY_FINISHED
+10-28 02:55:13.720   502   623 W InputReader: Device virtio_input_multi_touch_10 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:13.720   502   623 W InputReader: Device virtio_input_multi_touch_7 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:13.720   502   623 W InputReader: Device virtio_input_multi_touch_4 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:13.720   502   623 W InputReader: Device virtio_input_multi_touch_5 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:13.720   502   623 W InputReader: Device virtio_input_multi_touch_2 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:13.720   502   623 W InputReader: Device virtio_input_multi_touch_6 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:13.720   502   623 W InputReader: Device virtio_input_multi_touch_3 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:13.720   502   623 W InputReader: Device virtio_input_multi_touch_8 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:13.720   502   623 W InputReader: Device virtio_input_multi_touch_9 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:13.720   502   623 W InputReader: Device virtio_input_multi_touch_11 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:13.720   502   623 W InputReader: Device virtio_input_multi_touch_10 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:13.720   502   623 W InputReader: Device virtio_input_multi_touch_7 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:13.720   502   623 W InputReader: Device virtio_input_multi_touch_4 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:13.720   502   623 W InputReader: Device virtio_input_multi_touch_5 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:13.720   502   623 W InputReader: Device virtio_input_multi_touch_2 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:13.720   502   623 W InputReader: Device virtio_input_multi_touch_6 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:13.720   502   623 W InputReader: Device virtio_input_multi_touch_3 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:13.720   502   623 W InputReader: Device virtio_input_multi_touch_8 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:13.720   502   623 W InputReader: Device virtio_input_multi_touch_9 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:13.720   502   623 W InputReader: Device virtio_input_multi_touch_11 is associated with display ADISPLAY_ID_NONE.
+10-28 02:55:13.727  2356  2356 D LifecycleMonitor: Lifecycle status change: androidx.activity.ComponentActivity@df0f38b in: DESTROYED
+10-28 02:55:13.727  2356  2356 V ActivityScenario: Update currentActivityStage to DESTROYED, currentActivity=null
+10-28 02:55:13.735   299   299 D goldfish-address-space: claimShared: Ask to claim region [0x3ff975000 0x3ffa3d000]
+10-28 02:55:13.739  2356  2377 D IdlingRegistry: Unregistering idling resources: [androidx.compose.ui.test.EspressoLink@17c4ce4]
+10-28 02:55:13.740   299   299 D goldfish-address-space: claimShared: Ask to claim region [0x3fed0a000 0x3fedd2000]
+10-28 02:55:13.741  2356  2377 I TestRunner: finished: converter_scale150_dark(ru.madhare74.cbrrates.ScreenshotTest)

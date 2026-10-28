@@ -1,0 +1,5 @@
+10-28 02:55:19.542  2356  2377 I TestRunner: started: widget_usd_2x2_dark(ru.madhare74.cbrrates.WidgetScreenshotTest)
+10-28 02:55:19.689   391   391 I perfetto: probes_producer.cc:329  Producer stop (id=11)
+10-28 02:55:19.689   407   407 I perfetto: ng_service_impl.cc:1948 Tracing session 11 ended, total sessions:1
+10-28 02:55:19.954  2356  2377 W GlanceAppWidget: Cannot set the rounded corner of views before Api 31.
+10-28 02:55:19.989  2356  2377 I TestRunner: finished: widget_usd_2x2_dark(ru.madhare74.cbrrates.WidgetScreenshotTest)

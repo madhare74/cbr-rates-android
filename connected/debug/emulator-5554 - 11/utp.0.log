@@ -1,0 +1,67 @@
+INFO: Constructing runner from config.
+INFO: Configuring Android Instrumentation driver: android_instrumentation_runtime {
+  instrumentation_info {
+    app_package: "ru.madhare74.cbrrates"
+    test_package: "ru.madhare74.cbrrates.test"
+    test_runner_class: "androidx.test.runner.AndroidJUnitRunner"
+  }
+  instrumentation_args {
+    args_map {
+      key: "additionalTestOutputDir"
+      value: "/sdcard/Android/media/ru.madhare74.cbrrates/additional_test_output"
+    }
+  }
+}
+am_instrument_timeout: 31536000
+
+INFO: Configuring AndroidTestApkInstallerPlugin: apks_to_install {
+  apk_paths: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/apk/debug/app-debug.apk"
+  install_options {
+  }
+  uninstall_after_test: true
+}
+apks_to_install {
+  apk_paths: "/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk"
+  install_options {
+  }
+  uninstall_after_test: true
+}
+
+INFO: No installables found in test fixture. Nothing to install.
+INFO: Installing [/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/apk/debug/app-debug.apk] on device emulator-5554.
+INFO: Installing [/home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk] on device emulator-5554.
+INFO: Start logcat streaming.
+INFO: Running Android Instrumentation driver.
+INFO: Copying files from device to host: /sdcard/Android/media/ru.madhare74.cbrrates/additional_test_output to /home/runner/work/cbr-rates-android/cbr-rates-android/app/build/outputs/connected_android_test_additional_output/debugAndroidTest/connected/emulator-5554 - 11
+INFO: Stop logcat streaming.
+INFO: Uninstalling ru.madhare74.cbrrates for device emulator-5554.
+INFO: Uninstalling ru.madhare74.cbrrates.test for device emulator-5554.
+INFO: Execute ru.madhare74.cbrrates.RatesUiTest.converterOpensAndRecalculates: PASSED
+INFO: Execute ru.madhare74.cbrrates.RatesUiTest.screenOpensAndShowsList: PASSED
+INFO: Execute ru.madhare74.cbrrates.RatesUiTest.converterRespectsNominal: PASSED
+INFO: Execute ru.madhare74.cbrrates.RatesUiTest.errorShownWhenNoData: PASSED
+INFO: Execute ru.madhare74.cbrrates.RatesUiTest.searchFiltersList: PASSED
+INFO: Execute ru.madhare74.cbrrates.ScreenshotTest.list_scale200_dark: PASSED
+INFO: Execute ru.madhare74.cbrrates.ScreenshotTest.converter_scale150_dark: PASSED
+INFO: Execute ru.madhare74.cbrrates.ScreenshotTest.list_scale130_dark: PASSED
+INFO: Execute ru.madhare74.cbrrates.ScreenshotTest.widget_config_dark: PASSED
+INFO: Execute ru.madhare74.cbrrates.ScreenshotTest.list_scale100_dark: PASSED
+INFO: Execute ru.madhare74.cbrrates.ScreenshotTest.list_scale150_dark: PASSED
+INFO: Execute ru.madhare74.cbrrates.ScreenshotTest.list_scale100_light: PASSED
+INFO: Execute ru.madhare74.cbrrates.WidgetScreenshotTest.widget_usd_small_dark: PASSED
+INFO: Execute ru.madhare74.cbrrates.WidgetScreenshotTest.widget_1x1_usd_dark: PASSED
+INFO: Execute ru.madhare74.cbrrates.WidgetScreenshotTest.widget_stale_2x2_dark: PASSED
+INFO: Execute ru.madhare74.cbrrates.WidgetScreenshotTest.widget_usd_t40_dark: PASSED
+INFO: Execute ru.madhare74.cbrrates.WidgetScreenshotTest.widget_1x1_small_bigfont: PASSED
+INFO: Execute ru.madhare74.cbrrates.WidgetScreenshotTest.widget_kzt_2x2_light: PASSED
+INFO: Execute ru.madhare74.cbrrates.WidgetScreenshotTest.widget_usd_wide_dark: PASSED
+INFO: Execute ru.madhare74.cbrrates.WidgetScreenshotTest.widget_usd_bigfont_dark: PASSED
+INFO: Execute ru.madhare74.cbrrates.WidgetScreenshotTest.widget_usd_2x2_dark: PASSED
+INFO: Execute ru.madhare74.cbrrates.WidgetScreenshotTest.widget_eur_2x2_dark: PASSED
+INFO: Execute ru.madhare74.cbrrates.WidgetScreenshotTest.widget_1x1_kzt_light: PASSED
+INFO: Execute ru.madhare74.cbrrates.WidgetScreenshotTest.widget_stale_1x1_light: PASSED
+INFO: Execute ru.madhare74.cbrrates.WidgetScreenshotTest.widget_stale_1x1_dark: PASSED
+INFO: Execute ru.madhare74.cbrrates.WidgetScreenshotTest.widget_stale_1x1_t100: PASSED
+INFO: Execute ru.madhare74.cbrrates.WidgetScreenshotTest.widget_1x1_eur_t70: PASSED
+INFO: Execute ru.madhare74.cbrrates.WidgetScreenshotTest.widget_usd_t100_light: PASSED
+INFO: Execute ru.madhare74.cbrrates.WidgetScreenshotTest.widget_eur_t70_dark: PASSED
